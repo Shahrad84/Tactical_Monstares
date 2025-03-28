@@ -15,6 +15,13 @@ public:
     explicit menu_page(QWidget *parent = nullptr);
     ~menu_page();
 
+private slots:
+    void on_play_pushButton_clicked();
+
+    void on_cancel_pushButton_clicked();
+
+    void on_join_pushButton_clicked();
+
 private:
     Ui::menu_page *ui;
 };

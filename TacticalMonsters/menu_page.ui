@@ -13,7 +13,167 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="title_label">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>40</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tactical Monsters</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gallery_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>330</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Gallery</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="play_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>390</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start an Async PVP Game</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="playerUsernames_groupBox">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>200</y>
+      <width>411</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>player usernames</string>
+    </property>
+    <widget class="QLabel" name="player1username_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>player 1 username :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="player2username_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>player 2 username :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="player1usernamelineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="player2usernamelineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>130</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="join_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>230</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Join</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cancel_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>230</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>

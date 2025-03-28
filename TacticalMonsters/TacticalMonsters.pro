@@ -11,14 +11,17 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     menu_page.cpp \
+    play_page.cpp \
     welcome_page.cpp
 
 HEADERS += \
     menu_page.h \
+    play_page.h \
     welcome_page.h
 
 FORMS += \
     menu_page.ui \
+    play_page.ui \
     welcome_page.ui
 
 # Default rules for deployment.
