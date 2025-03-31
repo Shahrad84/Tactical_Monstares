@@ -22,6 +22,8 @@ private slots:
 
     void on_join_pushButton_clicked();
 
+    void on_gallery_pushButton_clicked();
+
 private:
     Ui::menu_page *ui;
 };

@@ -2,6 +2,7 @@
 #include "ui_menu_page.h"
 #include "QMessageBox"
 #include "play_page.h"
+#include "gallery_page.h"
 
 menu_page::menu_page(QWidget *parent)
     : QMainWindow(parent)
@@ -46,5 +47,13 @@ void menu_page::on_join_pushButton_clicked()
         w3->show();
         this->close();
     }
+}
+
+
+void menu_page::on_gallery_pushButton_clicked()
+{
+    gallery_page * w4 = new gallery_page;
+    w4->setWindowTitle("gallery");
+    w4->show();
 }
 
