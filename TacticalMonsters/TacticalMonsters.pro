@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     gallery_page.cpp \
+    hexa.cpp \
     main.cpp \
     menu_page.cpp \
     play_page.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     gallery_page.h \
+    hexa.h \
     menu_page.h \
     play_page.h \
     welcome_page.h
@@ -31,3 +33,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    image/hexa_images.qrc

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/hex_ver_1.png</file>
+        <file>image/hex_ver_2.png</file>
+        <file>image/hex_ver_4.png</file>
+        <file>image/hex_ver_p.png</file>
+        <file>image/hex_ver_r.png</file>
+        <file>image/hex_ver_w.png</file>
+    </qresource>
+</RCC>
