@@ -1,6 +1,31 @@
 // hexa.cpp
 #include "hexa.h"
 #include <QFont>
+#include "agent.h"
+#include "QDebug"
+#include "QMessageBox"
+
+class Agent;
+
+void Hexa::mousePressEvent(QMouseEvent* event){
+    if(event->button() == Qt::LeftButton){
+        if(located_agent->clicked_agent != nullptr && located_agent == nullptr){
+
+            emit clicked();
+
+            located_agent->clicked_agent->located_hexa->located_agent = nullptr;
+            located_agent->clicked_agent->located_hexa = this;
+            located_agent->clicked_agent = located_agent->clicked_agent;
+
+            located_agent->clicked_agent->Move(this);
+            located_agent->clicked_agent = nullptr;
+
+
+        }
+    }
+
+    QLabel::mousePressEvent(event);
+}
 
 void Hexa::Set_type(char input_type = 'p'){
 
@@ -51,4 +76,12 @@ Hexa::Hexa(int row, int col, QWidget *parent) : QLabel(parent)
 Hexa::~Hexa()
 {
     // Cleanup if needed
+}
+
+int Hexa::get_x_position(){
+    return x_pos;
+}
+
+int Hexa::get_y_position(){
+    return y_pos;
 }

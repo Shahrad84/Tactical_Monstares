@@ -3,6 +3,7 @@
 
 #include "hexa.h"
 #include "QLabel"
+#include "agent.h"
 
 play_page::play_page(QWidget *parent)
     : QMainWindow(parent)
@@ -29,10 +30,13 @@ play_page::play_page(QWidget *parent)
         }
     }
 
+    Agent * a = new Agent(this);
+    a->Move(hexa_array[1][2]);
+    //a->Move();
+
     // Set the label as central widget or position it as needed
     //setCentralWidget(myCustomLabel);
 
-    // Or if you want to position it:
     // myCustomLabel->setGeometry(50, 50, 200, 50);
 
     setWindowTitle("play_page");

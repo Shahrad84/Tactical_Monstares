@@ -2,8 +2,14 @@
 #ifndef HEXA_H
 #define HEXA_H
 
-#include <QLabel>
+#pragma once
 
+#include <QLabel>
+#include <QMouseEvent>
+#include <QObject>
+#include "agent.h"
+
+class Agent;
 
 class Hexa : public QLabel
 {
@@ -19,11 +25,20 @@ public:
 
     // You can add custom methods and signals/slots here
 
+    int get_x_position();
+    int get_y_position();
+    Agent * located_agent = nullptr;
 
 private:
     int x_pos;
     int y_pos;
     char type;
+
+protected:
+    void mousePressEvent(QMouseEvent* event) override;
+
+signals:
+    void clicked();  // Signal to emit when clicked
 };
 
 #endif // HEXA_H

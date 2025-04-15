@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    agent.cpp \
     gallery_page.cpp \
     hexa.cpp \
     main.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
     welcome_page.cpp
 
 HEADERS += \
+    agent.h \
     gallery_page.h \
     hexa.h \
     menu_page.h \
