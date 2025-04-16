@@ -23,6 +23,9 @@
       <height>521</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="title">
      <string>Player 1 : build your team</string>
     </property>
@@ -36,10 +39,32 @@
       <height>521</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="title">
      <string>Player 2 : build your team</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-120</x>
+      <y>-250</y>
+      <width>991</width>
+      <height>941</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/new/prefix1/background/16_37_22_raw.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>player1_groupBox</zorder>
+   <zorder>player2_groupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

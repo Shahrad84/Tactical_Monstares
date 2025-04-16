@@ -19,4 +19,4 @@ private:
     Ui::gallery_page *ui;
 };
 
-#endif // GALLERY_PAGE_H
+#endif

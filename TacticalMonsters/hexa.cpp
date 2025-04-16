@@ -29,6 +29,8 @@ void Hexa::mousePressEvent(QMouseEvent* event){
                 last_hexa->located_agent = nullptr;
             }
 
+            located_agent->change_turn();
+
         }
     }
 
@@ -64,11 +66,7 @@ void Hexa::Set_type(char input_type = 'p'){
 }
 
 
-Hexa::Hexa(int row, int col, QWidget *parent) : QLabel(parent)
-{
-    // Custom initialization
-    //setText("This is my custom label!");
-    //setStyleSheet("color: blue; background-color: lightyellow;");
+Hexa::Hexa(int row, int col, QWidget *parent) : QLabel(parent){
 
     Set_type();
     setFont(QFont("Arial", 12, QFont::Bold));
@@ -83,7 +81,7 @@ Hexa::Hexa(int row, int col, QWidget *parent) : QLabel(parent)
 
 Hexa::~Hexa()
 {
-    // Cleanup if needed
+
 }
 
 int Hexa::get_x_position(){

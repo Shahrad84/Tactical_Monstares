@@ -20,9 +20,6 @@ public:
     void parse(const QString &);
     ~play_page();
 
-    void chagne_turn();
-    char turn;
-
 private:
     Ui::play_page *ui;
     std::vector<std::vector<QChar>> fgrid;
@@ -30,4 +27,4 @@ private:
     const int HEX_ROWS = 5;
 };
 
-#endif // PLAY_PAGE_H
+#endif

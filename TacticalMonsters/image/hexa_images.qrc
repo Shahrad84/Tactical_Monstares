@@ -8,5 +8,8 @@
         <file>hex_ver_w.png</file>
         <file>heros/hero1.png</file>
         <file>heros/hero2.png</file>
+        <file>background/16_07_55_raw.jpg</file>
+        <file>background/16_08_06_raw.jpg</file>
+        <file>background/16_37_22_raw.jpg</file>
     </qresource>
 </RCC>

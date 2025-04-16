@@ -7,9 +7,10 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QObject>
+#include <play_page.h>
 
 
-class Hexa;  // Forward declaration
+class Hexa;
 
 class Agent : public QLabel
 {
@@ -23,6 +24,10 @@ public:
     Hexa * located_hexa;
     char player_1_or_2;
 
+    static char turn;
+    void change_turn();
+    static play_page * playPage;
+
 private:
     char type;
 
@@ -30,7 +35,7 @@ private:
     int y_pos;
 
 signals:
-    void clicked();  // Signal to emit when clicked
+    void clicked();
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;

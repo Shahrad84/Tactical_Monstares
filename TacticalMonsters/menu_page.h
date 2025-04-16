@@ -28,4 +28,4 @@ private:
     Ui::menu_page *ui;
 };
 
-#endif // MENU_PAGE_H
+#endif

@@ -12,6 +12,7 @@ menu_page::menu_page(QWidget *parent)
     setMaximumSize(800, 600);
     setMinimumSize(800, 600);
     ui->playerUsernames_groupBox->hide();
+    ui->title_label->setAlignment(Qt::AlignCenter);
 }
 
 menu_page::~menu_page()

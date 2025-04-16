@@ -6,9 +6,6 @@
 #include "agent.h"
 #include "QString"
 
-void play_page::chagne_turn(){
-    turn = (turn == '1') ? '2' : '1';
-}
 void play_page::parse(const QString &filepath){
 
     fgrid.resize(HEX_ROWS);
@@ -62,7 +59,6 @@ void play_page::parse(const QString &filepath){
         i +=2 ;
     }
 
-    //create_board();
 }
 
 play_page::play_page(QWidget *parent)
@@ -76,7 +72,6 @@ play_page::play_page(QWidget *parent)
     QString adress = "E:/qtprojects2/Tactical_Monstares-master/grid" + QString::number((rand() % 8) + 1) + ".txt";
     parse(adress);
 
-    // Create an instance of your custom label
 
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 9; j++){
@@ -104,7 +99,6 @@ play_page::play_page(QWidget *parent)
         a->setGeometry(680, 70 * (i + 1), 50, 50);
     }
 
-    // Set the label as central widget or position it as needed
     //setCentralWidget(myCustomLabel);
 
     // myCustomLabel->setGeometry(50, 50, 200, 50);

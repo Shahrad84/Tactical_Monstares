@@ -2,14 +2,23 @@
 #include <QLabel>
 #include "hexa.h"
 #include <QMouseEvent>
+#include <play_page.h>
+#include <QDebug>
+
+play_page * Agent::playPage;
+
+char Agent::turn = '1';
+
+void Agent::change_turn(){
+    turn = (turn == '1') ? '2' : '1';
+}
 
 Agent * Agent::clicked_agent = nullptr;
 
 void Agent::mousePressEvent(QMouseEvent* event)
 {
-    if (event->button() == Qt::LeftButton)
+    if (event->button() == Qt::LeftButton && turn == player_1_or_2)
     {
-
         clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
 
         emit clicked();
@@ -32,7 +41,7 @@ void Agent::Move(Hexa * new_hexa){
     }
 }
 
-Agent::Agent(char player_type, QWidget * parent) : QLabel(parent){
+Agent::Agent(char player_type, QWidget * parent) : QLabel(parent) {
     player_1_or_2 = player_type;
 
     if(player_1_or_2 == '1'){

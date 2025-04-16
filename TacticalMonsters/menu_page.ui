@@ -28,6 +28,10 @@
       <pointsize>28</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 125);
+color: rgb(0, 0, 0);</string>
+    </property>
     <property name="text">
      <string>Tactical Monsters</string>
     </property>
@@ -80,6 +84,9 @@
       <height>321</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 150);</string>
+    </property>
     <property name="title">
      <string>player usernames</string>
     </property>
@@ -88,7 +95,7 @@
       <rect>
        <x>20</x>
        <y>60</y>
-       <width>181</width>
+       <width>171</width>
        <height>41</height>
       </rect>
      </property>
@@ -96,6 +103,10 @@
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string>player 1 username :</string>
@@ -106,7 +117,7 @@
       <rect>
        <x>20</x>
        <y>120</y>
-       <width>181</width>
+       <width>171</width>
        <height>41</height>
       </rect>
      </property>
@@ -115,6 +126,10 @@
        <pointsize>14</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+     </property>
      <property name="text">
       <string>player 2 username :</string>
      </property>
@@ -122,21 +137,27 @@
     <widget class="QLineEdit" name="player1usernamelineEdit">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>210</x>
        <y>70</y>
-       <width>191</width>
+       <width>181</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="player2usernamelineEdit">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>210</x>
        <y>130</y>
-       <width>191</width>
+       <width>181</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="join_pushButton">
@@ -152,6 +173,9 @@
       <font>
        <pointsize>14</pointsize>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
       <string>Join</string>
@@ -171,11 +195,35 @@
        <pointsize>14</pointsize>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);</string>
+     </property>
      <property name="text">
       <string>Cancel</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>861</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/new/prefix1/background/16_08_06_raw.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>title_label</zorder>
+   <zorder>gallery_pushButton</zorder>
+   <zorder>play_pushButton</zorder>
+   <zorder>playerUsernames_groupBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

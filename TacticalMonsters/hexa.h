@@ -1,4 +1,3 @@
-// hexa.h
 #ifndef HEXA_H
 #define HEXA_H
 

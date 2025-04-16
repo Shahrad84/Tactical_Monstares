@@ -9,6 +9,7 @@ welcome_page::welcome_page(QWidget *parent)
     ui->setupUi(this);
     setMaximumSize(800, 600);
     setMinimumSize(800, 600);
+    ui->title_label->setAlignment(Qt::AlignCenter);
 }
 
 welcome_page::~welcome_page()
