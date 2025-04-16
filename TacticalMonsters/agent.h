@@ -16,11 +16,12 @@ class Agent : public QLabel
     Q_OBJECT
 
 public:
-    explicit Agent(QWidget* parent = nullptr);
+    explicit Agent(char player_type, QWidget* parent = nullptr);
     void Move(Hexa* new_hexa);
 
     static Agent * clicked_agent;
     Hexa * located_hexa;
+    char player_1_or_2;
 
 private:
     char type;

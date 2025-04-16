@@ -4,22 +4,30 @@
 #include "agent.h"
 #include "QDebug"
 #include "QMessageBox"
+#include "play_page.h"
 
 class Agent;
 
 void Hexa::mousePressEvent(QMouseEvent* event){
     if(event->button() == Qt::LeftButton){
-        if(located_agent->clicked_agent != nullptr && located_agent == nullptr){
+        if(located_agent->clicked_agent != nullptr && located_agent == nullptr && located_agent->clicked_agent->player_1_or_2 == this->type){
 
             emit clicked();
 
-            located_agent->clicked_agent->located_hexa->located_agent = nullptr;
-            located_agent->clicked_agent->located_hexa = this;
-            located_agent->clicked_agent = located_agent->clicked_agent;
+            Hexa * last_hexa = located_agent->clicked_agent->located_hexa;
 
+            //located_agent->clicked_agent->located_hexa->located_agent = nullptr;
+
+            located_agent->clicked_agent->located_hexa = this;
+
+            this->located_agent = located_agent->clicked_agent;
+            //located_agent->clicked_agent = located_agent->clicked_agent;
             located_agent->clicked_agent->Move(this);
             located_agent->clicked_agent = nullptr;
 
+            if(last_hexa != nullptr){
+                last_hexa->located_agent = nullptr;
+            }
 
         }
     }
@@ -45,11 +53,11 @@ void Hexa::Set_type(char input_type = 'p'){
         setStyleSheet("image: url(:/new/prefix1/hex_ver_2.png);");
         break;
 
-    case 'w':
+    case '~':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_w.png);");
         break;
 
-    case 'r':
+    case '#':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_r.png);");
         break;
     }
@@ -84,4 +92,8 @@ int Hexa::get_x_position(){
 
 int Hexa::get_y_position(){
     return y_pos;
+}
+
+char Hexa::get_type(){
+    return type;
 }

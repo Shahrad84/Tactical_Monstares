@@ -8,6 +8,7 @@
 #include <QMouseEvent>
 #include <QObject>
 #include "agent.h"
+#include "QChar"
 
 class Agent;
 
@@ -28,6 +29,7 @@ public:
     int get_x_position();
     int get_y_position();
     Agent * located_agent = nullptr;
+    char get_type();
 
 private:
     int x_pos;

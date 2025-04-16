@@ -7,5 +7,6 @@
         <file>hex_ver_r.png</file>
         <file>hex_ver_w.png</file>
         <file>heros/hero1.png</file>
+        <file>heros/hero2.png</file>
     </qresource>
 </RCC>
