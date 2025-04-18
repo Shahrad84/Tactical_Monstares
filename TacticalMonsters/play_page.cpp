@@ -6,6 +6,22 @@
 #include "agent.h"
 #include "QString"
 
+void play_page::change_turn(){
+    turn = (turn == '1') ? '2' : '1';
+
+    if(turn == '1'){
+        ui->player_1_turn_label->show();
+        ui->player_2_turn_label->hide();
+    }
+
+    else if(turn == '2'){
+        ui->player_1_turn_label->show();
+        ui->player_2_turn_label->hide();
+    }
+}
+
+char play_page::turn = '2';
+
 void play_page::parse(const QString &filepath){
 
     fgrid.resize(HEX_ROWS);
@@ -66,6 +82,8 @@ play_page::play_page(QWidget *parent)
     , ui(new Ui::play_page)
 {
     ui->setupUi(this);
+
+    change_turn();
 
     Hexa * hexa_array[9][5];
 

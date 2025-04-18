@@ -20,6 +20,9 @@ public:
     void parse(const QString &);
     ~play_page();
 
+    static char turn;
+    void change_turn();
+
 private:
     Ui::play_page *ui;
     std::vector<std::vector<QChar>> fgrid;

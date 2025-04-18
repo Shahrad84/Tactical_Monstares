@@ -20,6 +20,8 @@ void Agent::mousePressEvent(QMouseEvent* event)
     if (event->button() == Qt::LeftButton && turn == player_1_or_2)
     {
         clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
+        size = (clicked_agent == this) ? 60 : 50;
+        resize(size, size);
 
         emit clicked();
 
@@ -35,13 +37,15 @@ void Agent::Move(Hexa * new_hexa){
         setGeometry(20, 20, 50, 50);
     }
     else{
-        setGeometry(located_hexa->get_x_position(), located_hexa->get_y_position(), 50, 50);
+        size = 50;
+        setGeometry(located_hexa->get_x_position(), located_hexa->get_y_position(), size, size);
 
         located_hexa->located_agent = this;
     }
 }
 
-Agent::Agent(char player_type, QWidget * parent) : QLabel(parent) {
+Agent::Agent(char player_type, QWidget * parent) : QLabel(parent){
+    size = 50;
     player_1_or_2 = player_type;
 
     if(player_1_or_2 == '1'){

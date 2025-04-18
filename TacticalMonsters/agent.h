@@ -30,9 +30,9 @@ public:
 
 private:
     char type;
-
     int x_pos;
     int y_pos;
+    int size;
 
 signals:
     void clicked();
