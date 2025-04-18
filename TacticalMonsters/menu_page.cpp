@@ -43,7 +43,7 @@ void menu_page::on_join_pushButton_clicked()
         QMessageBox::warning(this, "error", "every 2 fields must be completed");
     }
     else{
-        play_page * w3 = new play_page;
+        play_page * w3 = new play_page(p1_username, p2_username);
         w3->setWindowTitle("main page");
         w3->show();
         this->close();

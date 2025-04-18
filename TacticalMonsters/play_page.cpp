@@ -15,8 +15,8 @@ void play_page::change_turn(){
     }
 
     else if(turn == '2'){
-        ui->player_1_turn_label->show();
-        ui->player_2_turn_label->hide();
+        ui->player_1_turn_label->hide();
+        ui->player_2_turn_label->show();
     }
 }
 
@@ -24,14 +24,14 @@ char play_page::turn = '2';
 
 void play_page::parse(const QString &filepath){
 
-    fgrid.resize(HEX_ROWS);
+    // fgrid.resize(HEX_ROWS);
 
-    for (int row = 0; row < HEX_ROWS; ++row) {
-        fgrid[row].resize(HEX_COLS);
-        for (int col = 0; col < HEX_COLS; ++col) {
-            fgrid[row][col]= ' ';
-        }
-    }
+    // for (int row = 0; row < HEX_ROWS; ++row) {
+    //     fgrid[row].resize(HEX_COLS);
+    //     for (int col = 0; col < HEX_COLS; ++col) {
+    //         fgrid[row][col]= ' ';
+    //     }
+    // }
 
     QFile file(filepath);
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
@@ -45,7 +45,7 @@ void play_page::parse(const QString &filepath){
     while(!in.atEnd()) lines << in.readLine();
     unsigned long row = 0;
     unsigned long col = 0;
-    unsigned long l = 0;
+    //unsigned long l = 0;
 
     int j = 0;
     int i = 1;
@@ -77,11 +77,14 @@ void play_page::parse(const QString &filepath){
 
 }
 
-play_page::play_page(QWidget *parent)
+play_page::play_page(QString player_1_name, QString player_2_name, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::play_page)
 {
     ui->setupUi(this);
+
+    ui->player1_groupBox->setTitle(player_1_name);
+    ui->player2_groupBox->setTitle(player_2_name);
 
     change_turn();
 
@@ -93,7 +96,7 @@ play_page::play_page(QWidget *parent)
 
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 9; j++){
-            hexa_array[i][j] = new Hexa(i, j, this);
+            hexa_array[i][j] = new Hexa(i, j, this, this);
             hexa_array[i][j]->Set_type(fgrid[i][j].toLatin1());
         }
     }
@@ -103,17 +106,17 @@ play_page::play_page(QWidget *parent)
             hexa_array[4][j] = NULL;
         }
         else{
-            hexa_array[4][j] = new Hexa(4, j, this);
+            hexa_array[4][j] = new Hexa(4, j, this, this);
         }
     }
 
     for(int i = 0; i < 3; i++){
-        Agent * a = new Agent('1', this);
+        Agent * a = new Agent('1', this, this);
         a->setGeometry(50, 70 * (i + 1), 50, 50);
     }
 
     for(int i = 0; i < 3; i++){
-        Agent * a = new Agent('2', this);
+        Agent * a = new Agent('2', this, this);
         a->setGeometry(680, 70 * (i + 1), 50, 50);
     }
 

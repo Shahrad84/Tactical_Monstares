@@ -8,28 +8,28 @@
 
 class Agent;
 
+play_page * Hexa::playPage = nullptr;
+
 void Hexa::mousePressEvent(QMouseEvent* event){
     if(event->button() == Qt::LeftButton){
-        if(located_agent->clicked_agent != nullptr && located_agent == nullptr && located_agent->clicked_agent->player_1_or_2 == this->type){
+        if(Agent::clicked_agent != nullptr && located_agent == nullptr && Agent::clicked_agent->player_1_or_2 == this->type){
 
             emit clicked();
 
-            Hexa * last_hexa = located_agent->clicked_agent->located_hexa;
+            Hexa * last_hexa = Agent::clicked_agent->located_hexa;
 
-            //located_agent->clicked_agent->located_hexa->located_agent = nullptr;
+            Agent::clicked_agent->located_hexa = this;
 
-            located_agent->clicked_agent->located_hexa = this;
+            this->located_agent = Agent::clicked_agent;
 
-            this->located_agent = located_agent->clicked_agent;
-            //located_agent->clicked_agent = located_agent->clicked_agent;
-            located_agent->clicked_agent->Move(this);
-            located_agent->clicked_agent = nullptr;
+            Agent::clicked_agent->Move(this);
+            Agent::clicked_agent = nullptr;
 
             if(last_hexa != nullptr){
                 last_hexa->located_agent = nullptr;
             }
 
-            located_agent->change_turn();
+            playPage->change_turn();
 
         }
     }
@@ -66,7 +66,11 @@ void Hexa::Set_type(char input_type = 'p'){
 }
 
 
-Hexa::Hexa(int row, int col, QWidget *parent) : QLabel(parent){
+Hexa::Hexa(int row, int col, QWidget *parent, play_page * page) : QLabel(parent){
+
+    if(playPage == nullptr){
+        playPage = page;
+    }
 
     Set_type();
     setFont(QFont("Arial", 12, QFont::Bold));

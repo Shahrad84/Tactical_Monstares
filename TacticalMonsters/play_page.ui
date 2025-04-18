@@ -23,11 +23,16 @@
       <height>521</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
-     <string>Player 1 : build your team</string>
+     <string>Player 1 :</string>
     </property>
     <widget class="QLabel" name="player_1_turn_label">
      <property name="geometry">
@@ -67,11 +72,16 @@ background-color: rgba(255, 0, 0, 70);</string>
       <height>521</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="title">
-     <string>Player 2 : build your team</string>
+     <string>Player 2 :</string>
     </property>
     <widget class="QLabel" name="player_2_turn_label">
      <property name="geometry">
@@ -115,7 +125,7 @@ background-color: rgba(0, 0, 255, 70);</string>
      <string notr="true">background-image: url(:/new/prefix1/background/16_37_22_raw.jpg);</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Player  1 :</string>
     </property>
    </widget>
    <zorder>label</zorder>

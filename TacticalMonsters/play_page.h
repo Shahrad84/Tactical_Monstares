@@ -16,7 +16,7 @@ class play_page : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit play_page(QWidget *parent = nullptr);
+    explicit play_page(QString player_1_name, QString player_2_name, QWidget * parent = nullptr);
     void parse(const QString &);
     ~play_page();
 
@@ -25,7 +25,7 @@ public:
 
 private:
     Ui::play_page *ui;
-    std::vector<std::vector<QChar>> fgrid;
+    QChar fgrid[5][9];
     const int HEX_COLS = 9;
     const int HEX_ROWS = 5;
 };

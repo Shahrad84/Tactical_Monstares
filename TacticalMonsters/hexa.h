@@ -8,6 +8,7 @@
 #include <QObject>
 #include "agent.h"
 #include "QChar"
+#include "play_page.h"
 
 class Agent;
 
@@ -16,7 +17,7 @@ class Hexa : public QLabel
     Q_OBJECT
 
 public:
-    explicit Hexa(int row, int col, QWidget *parent = nullptr);
+    explicit Hexa(int row, int col, QWidget *parent, play_page * page);
     ~Hexa();
 
     void Set_type(char input_type);
@@ -34,6 +35,8 @@ private:
     int x_pos;
     int y_pos;
     char type;
+    static play_page * playPage;
+
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;

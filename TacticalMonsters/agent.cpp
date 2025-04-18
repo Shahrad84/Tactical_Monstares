@@ -5,19 +5,13 @@
 #include <play_page.h>
 #include <QDebug>
 
-play_page * Agent::playPage;
-
-char Agent::turn = '1';
-
-void Agent::change_turn(){
-    turn = (turn == '1') ? '2' : '1';
-}
+play_page * Agent::playPage = nullptr;
 
 Agent * Agent::clicked_agent = nullptr;
 
 void Agent::mousePressEvent(QMouseEvent* event)
 {
-    if (event->button() == Qt::LeftButton && turn == player_1_or_2)
+    if (event->button() == Qt::LeftButton && playPage->turn == player_1_or_2)
     {
         clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
         size = (clicked_agent == this) ? 60 : 50;
@@ -44,7 +38,12 @@ void Agent::Move(Hexa * new_hexa){
     }
 }
 
-Agent::Agent(char player_type, QWidget * parent) : QLabel(parent){
+Agent::Agent(char player_type, QWidget * parent, play_page * page) : QLabel(parent){
+
+    if(playPage == nullptr){
+        playPage = page;
+    }
+
     size = 50;
     player_1_or_2 = player_type;
 
