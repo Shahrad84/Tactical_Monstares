@@ -22,59 +22,39 @@ void play_page::change_turn(){
 
 char play_page::turn = '2';
 
-void play_page::parse(const QString &filepath){
-
-    // fgrid.resize(HEX_ROWS);
-
-    // for (int row = 0; row < HEX_ROWS; ++row) {
-    //     fgrid[row].resize(HEX_COLS);
-    //     for (int col = 0; col < HEX_COLS; ++col) {
-    //         fgrid[row][col]= ' ';
-    //     }
-    // }
+void play_page::parse(const QString &filepath) {
 
     QFile file(filepath);
-    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        //QMessageBox::critical(this , "error" , "connot open file");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         return;
     }
 
     QTextStream in(&file);
-    QStringList lines;
+    QStringList lines = in.readAll().split('\n');
 
-    while(!in.atEnd()) lines << in.readLine();
-    unsigned long row = 0;
-    unsigned long col = 0;
-    //unsigned long l = 0;
+    int row = 0;
 
-    int j = 0;
-    int i = 1;
+    for(int i = 1; i < lines.size(); i += 2){
 
-    while(i < lines.size()){
-
-        QString line_e = lines[i];
-        QString line_o = lines[i + 1];
-
-        col = 0;
-        j = 1;
-        while(j < line_e.length()){
-            QChar c = line_e[j];
-            fgrid[row][col] =c.toLatin1();
-            col+=2;
-            j +=6;
-        }
-        col = 1;
-        j = 4;
-        while(j < line_o.length()){
-            fgrid[row][col] = line_o[j];
-            col+=2;
-            j +=6;
+        if(i + 1 >= lines.size()){
+            break;
         }
 
-        row++;
-        i +=2 ;
+        QString evenLine = lines[i];
+        QString oddLine = lines[i + 1];
+
+        // 1, 7, 13, ...
+        for(int col = 0, j = 1; j < evenLine.length(); col += 2, j += 6){
+            extracted_datas_from_txtFile[row][col] = evenLine[j].toLatin1();
+        }
+
+        // 4, 6, 10, ...
+        for(int col = 1, j = 4; j < oddLine.length(); col += 2, j += 6){
+            extracted_datas_from_txtFile[row][col] = oddLine[j].toLatin1();
+        }
+
+        row ++;
     }
-
 }
 
 play_page::play_page(QString player_1_name, QString player_2_name, QWidget *parent)
@@ -90,14 +70,14 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
 
     Hexa * hexa_array[9][5];
 
-    QString adress = "E:/qtprojects2/Tactical_Monstares-master/grid" + QString::number((rand() % 8) + 1) + ".txt";
+    QString adress = ":/new/prefix1/grid" + QString::number((rand() % 8) + 1) + ".txt";
     parse(adress);
 
 
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 9; j++){
             hexa_array[i][j] = new Hexa(i, j, this, this);
-            hexa_array[i][j]->Set_type(fgrid[i][j].toLatin1());
+            hexa_array[i][j]->Set_type(extracted_datas_from_txtFile[i][j].toLatin1());
         }
     }
 
@@ -107,6 +87,7 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
         }
         else{
             hexa_array[4][j] = new Hexa(4, j, this, this);
+            hexa_array[4][j]->Set_type(extracted_datas_from_txtFile[4][j].toLatin1());
         }
     }
 

@@ -3,13 +3,16 @@
         <file>hex_ver_1.png</file>
         <file>hex_ver_2.png</file>
         <file>hex_ver_4.png</file>
-        <file>hex_ver_p.png</file>
-        <file>hex_ver_r.png</file>
-        <file>hex_ver_w.png</file>
         <file>heros/hero1.png</file>
         <file>heros/hero2.png</file>
         <file>background/16_07_55_raw.jpg</file>
         <file>background/16_08_06_raw.jpg</file>
         <file>background/16_37_22_raw.jpg</file>
+        <file>background/ChatGPT Image Apr 25, 2025, 09_35_58 PM.jpg</file>
+        <file>background/ChatGPT Image Apr 25, 2025, 09_43_47 PM.jpg</file>
+        <file>background/ChatGPT Image Apr 25, 2025, 09_49_52 PM.png</file>
+        <file>hex_ver_p.png</file>
+        <file>hex_ver_r.png</file>
+        <file>hex_ver_w.png</file>
     </qresource>
 </RCC>

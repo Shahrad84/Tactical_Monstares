@@ -25,7 +25,7 @@ public:
 
 private:
     Ui::play_page *ui;
-    QChar fgrid[5][9];
+    QChar extracted_datas_from_txtFile[5][9];
     const int HEX_COLS = 9;
     const int HEX_ROWS = 5;
 };

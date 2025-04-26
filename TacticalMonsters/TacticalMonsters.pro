@@ -37,4 +37,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    image/hexa_images.qrc
+    image/hexa_images.qrc \
+    txt_files/txt_files.qrc

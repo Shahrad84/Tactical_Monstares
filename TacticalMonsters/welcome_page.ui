@@ -64,14 +64,14 @@ background-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>-60</y>
+      <x>0</x>
+      <y>10</y>
       <width>811</width>
       <height>651</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/background/16_07_55_raw.jpg);</string>
+     <string notr="true">background-image: url(:/new/prefix1/background/ChatGPT Image Apr 25, 2025, 09_43_47 PM.jpg);</string>
     </property>
     <property name="text">
      <string/>

@@ -115,14 +115,14 @@ background-color: rgba(0, 0, 255, 70);</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-120</x>
-      <y>-250</y>
+      <x>-110</x>
+      <y>-190</y>
       <width>991</width>
       <height>941</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/new/prefix1/background/16_37_22_raw.jpg);</string>
+     <string notr="true">background-image: url(:/new/prefix1/background/ChatGPT Image Apr 25, 2025, 09_49_52 PM.png);</string>
     </property>
     <property name="text">
      <string>Player  1 :</string>
