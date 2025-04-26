@@ -24,8 +24,6 @@ public:
 
     //void Determine_x_and_y(int row, int col);
 
-    // You can add custom methods and signals/slots here
-
     int get_x_position();
     int get_y_position();
     Agent * located_agent = nullptr;
@@ -42,7 +40,7 @@ protected:
     void mousePressEvent(QMouseEvent* event) override;
 
 signals:
-    void clicked();  // Signal to emit when clicked
+    void clicked();
 };
 
-#endif // HEXA_H
+#endif

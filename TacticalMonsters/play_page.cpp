@@ -101,9 +101,6 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
         a->setGeometry(680, 70 * (i + 1), 50, 50);
     }
 
-    //setCentralWidget(myCustomLabel);
-
-    // myCustomLabel->setGeometry(50, 50, 200, 50);
 
     setWindowTitle("play_page");
 
