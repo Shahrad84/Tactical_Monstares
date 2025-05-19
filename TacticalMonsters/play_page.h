@@ -1,11 +1,16 @@
 #ifndef PLAY_PAGE_H
 #define PLAY_PAGE_H
 
+#pragma once
+
+// #include <hexa.h>
 #include <QMainWindow>
 #include <QFile>
 #include <QTextStream>
 #include <QVector>
 #include <QString>
+
+class Hexa;
 
 namespace Ui {
 class play_page;
@@ -22,12 +27,14 @@ public:
 
     static char turn;
     void change_turn();
+    Hexa * hexa_array[9][9];
 
 private:
+
     Ui::play_page *ui;
-    QChar extracted_datas_from_txtFile[5][9];
+    QChar extracted_datas_from_txtFile[9][9];
     const int HEX_COLS = 9;
-    const int HEX_ROWS = 5;
+    const int HEX_ROWS = 9;
 };
 
 #endif

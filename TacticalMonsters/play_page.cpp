@@ -32,29 +32,26 @@ void play_page::parse(const QString &filepath) {
     QTextStream in(&file);
     QStringList lines = in.readAll().split('\n');
 
-    int row = 0;
+    QString lines_QStringArray[11];
 
-    for(int i = 1; i < lines.size(); i += 2){
-
-        if(i + 1 >= lines.size()){
-            break;
-        }
-
-        QString evenLine = lines[i];
-        QString oddLine = lines[i + 1];
-
-        // 1, 7, 13, ...
-        for(int col = 0, j = 1; j < evenLine.length(); col += 2, j += 6){
-            extracted_datas_from_txtFile[row][col] = evenLine[j].toLatin1();
-        }
-
-        // 4, 6, 10, ...
-        for(int col = 1, j = 4; j < oddLine.length(); col += 2, j += 6){
-            extracted_datas_from_txtFile[row][col] = oddLine[j].toLatin1();
-        }
-
-        row ++;
+    for(int i = 0; i < 11; i++){
+        lines_QStringArray[i] = lines[i];
     }
+
+
+    for(int i = 0; i <= 8; i ++){
+        for(int j = i % 2; j <= 8; j+= 2){
+
+            extracted_datas_from_txtFile[i][j] = lines_QStringArray[i + 1][3 * j + 1];
+
+        }
+    }
+
+    //text(3, 1) = hexa(2, 0)
+    //text(5, 1) = hexa(4, 0)
+    //text(5, 7) = hexa(4, 2)
+
+    //text(i+1 , 3j+1) = hexa(i, j)
 }
 
 play_page::play_page(QString player_1_name, QString player_2_name, QWidget *parent)
@@ -68,26 +65,15 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
 
     change_turn();
 
-    Hexa * hexa_array[9][5];
-
     QString adress = ":/new/prefix1/grid" + QString::number((rand() % 8) + 1) + ".txt";
     parse(adress);
 
 
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 9; j++){
-            hexa_array[i][j] = new Hexa(i, j, this, this);
-            hexa_array[i][j]->Set_type(extracted_datas_from_txtFile[i][j].toLatin1());
-        }
-    }
+    for(int i = 0; i <= 8; i ++){
+        for(int j = i % 2; j <= 8; j += 2){
 
-    for(int j = 0; j < 9; j++){
-        if(j % 2 != 0){
-            hexa_array[4][j] = NULL;
-        }
-        else{
-            hexa_array[4][j] = new Hexa(4, j, this, this);
-            hexa_array[4][j]->Set_type(extracted_datas_from_txtFile[4][j].toLatin1());
+            hexa_array[i][j] = new Hexa(i, j, this, this);
+            hexa_array[i][j]->Set_type(extracted_datas_from_txtFile[i][j].toLatin1()); 
         }
     }
 
@@ -100,7 +86,6 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
         Agent * a = new Agent('2', this, this);
         a->setGeometry(680, 70 * (i + 1), 50, 50);
     }
-
 
     setWindowTitle("play_page");
 

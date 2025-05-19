@@ -29,11 +29,32 @@ public:
     Agent * located_agent = nullptr;
     char get_type();
 
+
+    Hexa * get_up();
+    Hexa * get_down();
+    Hexa * get_right_up();
+    Hexa * get_right_down();
+    Hexa * get_left_up();
+    Hexa * get_left_down();
+    int get_i();
+    int get_j();
+
+
 private:
     int x_pos;
     int y_pos;
     char type;
     static play_page * playPage;
+
+    Hexa * up;
+    Hexa * down;
+    Hexa * right_up;
+    Hexa * right_down;
+    Hexa * left_up;
+    Hexa * left_down;
+
+    int i, j;
+    void setNeighbors();
 
 
 protected:

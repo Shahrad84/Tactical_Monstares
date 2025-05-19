@@ -1,4 +1,4 @@
-// hexa.cpp
+//hexa.cpp
 #include "hexa.h"
 #include <QFont>
 #include "agent.h"
@@ -76,11 +76,15 @@ Hexa::Hexa(int row, int col, QWidget *parent, play_page * page) : QLabel(parent)
     setFont(QFont("Arial", 12, QFont::Bold));
     setAlignment(Qt::AlignCenter);
 
-    x_pos = 220 + 40 * col;
-    y_pos = (col % 2 == 0) ? 140 + 60 * row : 170 + 60 * row;
+    x_pos = 220 + 38 * col;
+    y_pos = 170 + 23 * row;
     setGeometry(x_pos, y_pos, 50, 50);
 
     setAlignment(Qt::AlignCenter);
+
+    i = row;
+    j = col;
+    setNeighbors();
 }
 
 Hexa::~Hexa()
@@ -99,3 +103,21 @@ int Hexa::get_y_position(){
 char Hexa::get_type(){
     return type;
 }
+
+void Hexa::setNeighbors(){
+    up = (i - 2 >= 0) ? playPage->hexa_array[i - 2][j] : NULL;
+    down = (i + 2 <= 8) ? playPage->hexa_array[i + 2][j] : NULL;
+    right_up = (i - 1 >= 0 && j + 1 <= 8) ? playPage->hexa_array[i - 1][j + 1] : NULL;
+    right_down = (i + 1 <= 8 && j + 1 <= 8) ? playPage->hexa_array[i + 1][j + 1] : NULL;
+    left_up = (i - 1 >= 0 && j - 1 >= 0) ? playPage->hexa_array[i - 1][j - 1] : NULL;
+    left_down = (i + 1 <= 8 && j - 1 >= 0) ? playPage->hexa_array[i + 1][j - 1] : NULL;
+}
+
+Hexa * Hexa::get_up(){return up;}
+Hexa * Hexa::get_down(){return down;}
+Hexa * Hexa::get_right_up(){return right_up;}
+Hexa * Hexa::get_right_down(){return right_down;}
+Hexa * Hexa::get_left_up(){return left_up;}
+Hexa * Hexa::get_left_down(){return left_down;}
+int Hexa::get_i(){return i;}
+int Hexa::get_j(){return j;}
