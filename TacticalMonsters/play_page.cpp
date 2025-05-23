@@ -103,11 +103,13 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     setMinimumSize(800, 600);
 
     in_range_system = new InRangeSystem(this);
-    queue <Hexa *> q = in_range_system->Find_in_range(hexa_array[5][5], 2);
-    while(!q.empty()){
-        qDebug() << q.front()->get_i() << ", " << q.front()->get_j();
-        q.pop();
-    }
+    // queue <Hexa *> q = in_range_system->Find_in_range(hexa_array[5][5], 3);
+    // while(!q.empty()){
+    //     qDebug() << q.front()->get_i() << ", " << q.front()->get_j();
+    //     q.front()->Set_type('g');
+    //     q.pop();
+    // }
+    // hexa_array[5][5]->Set_type('d');
 }
 
 play_page::~play_page()

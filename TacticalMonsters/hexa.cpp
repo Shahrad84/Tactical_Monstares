@@ -62,7 +62,17 @@ void Hexa::Set_type(char input_type = 'p'){
     case '#':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_r.png);");
         break;
+
+    case 'g':
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_g.png);");
+        break;
+
+    case 'd':
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_d.png);");
+        break;
     }
+
+
 }
 
 

@@ -14,5 +14,7 @@
         <file>hex_ver_p.png</file>
         <file>hex_ver_r.png</file>
         <file>hex_ver_w.png</file>
+        <file>hex_ver_g.png</file>
+        <file>hex_ver_d.png</file>
     </qresource>
 </RCC>
