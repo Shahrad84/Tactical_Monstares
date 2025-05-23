@@ -84,7 +84,7 @@ Hexa::Hexa(int row, int col, QWidget *parent, play_page * page) : QLabel(parent)
 
     i = row;
     j = col;
-    setNeighbors();
+    //setNeighbors();
 }
 
 Hexa::~Hexa()
@@ -111,6 +111,13 @@ void Hexa::setNeighbors(){
     right_down = (i + 1 <= 8 && j + 1 <= 8) ? playPage->hexa_array[i + 1][j + 1] : NULL;
     left_up = (i - 1 >= 0 && j - 1 >= 0) ? playPage->hexa_array[i - 1][j - 1] : NULL;
     left_down = (i + 1 <= 8 && j - 1 >= 0) ? playPage->hexa_array[i + 1][j - 1] : NULL;
+
+    neighbors.push_back(up);
+    neighbors.push_back(down);
+    neighbors.push_back(right_up);
+    neighbors.push_back(right_down);
+    neighbors.push_back(left_up);
+    neighbors.push_back(left_down);
 }
 
 Hexa * Hexa::get_up(){return up;}
@@ -121,3 +128,10 @@ Hexa * Hexa::get_left_up(){return left_up;}
 Hexa * Hexa::get_left_down(){return left_down;}
 int Hexa::get_i(){return i;}
 int Hexa::get_j(){return j;}
+Hexa * Hexa::get_member_of_neighbors(int index){
+    if(index < 0 || index > 5){
+        return nullptr;
+    }
+    return neighbors[index];
+}
+

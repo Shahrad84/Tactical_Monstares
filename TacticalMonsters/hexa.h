@@ -9,6 +9,7 @@
 #include "agent.h"
 #include "QChar"
 #include "play_page.h"
+#include "vector"
 
 class Agent;
 
@@ -38,7 +39,8 @@ public:
     Hexa * get_left_down();
     int get_i();
     int get_j();
-
+    Hexa * get_member_of_neighbors(int);
+    void setNeighbors();
 
 private:
     int x_pos;
@@ -52,9 +54,11 @@ private:
     Hexa * right_down;
     Hexa * left_up;
     Hexa * left_down;
+    //Hexa * neighbors[6] = {up, down, right_up, right_down, left_up, left_down};
+    vector<Hexa *> neighbors;
 
     int i, j;
-    void setNeighbors();
+
 
 
 protected:

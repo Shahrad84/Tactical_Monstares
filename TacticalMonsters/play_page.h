@@ -10,7 +10,10 @@
 #include <QVector>
 #include <QString>
 
+using std::vector;
+
 class Hexa;
+class InRangeSystem;
 
 namespace Ui {
 class play_page;
@@ -28,6 +31,8 @@ public:
     static char turn;
     void change_turn();
     Hexa * hexa_array[9][9];
+
+    InRangeSystem * in_range_system;
 
 private:
 

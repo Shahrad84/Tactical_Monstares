@@ -12,6 +12,7 @@ SOURCES += \
     agent.cpp \
     gallery_page.cpp \
     hexa.cpp \
+    inrangesystem.cpp \
     main.cpp \
     menu_page.cpp \
     play_page.cpp \
@@ -21,6 +22,7 @@ HEADERS += \
     agent.h \
     gallery_page.h \
     hexa.h \
+    inrangesystem.h \
     menu_page.h \
     play_page.h \
     welcome_page.h

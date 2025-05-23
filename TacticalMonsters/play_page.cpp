@@ -5,6 +5,10 @@
 #include "QLabel"
 #include "agent.h"
 #include "QString"
+#include "inrangesystem.h"
+#include <queue>
+using std::queue;
+
 
 void play_page::change_turn(){
     turn = (turn == '1') ? '2' : '1';
@@ -77,6 +81,12 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
         }
     }
 
+    for(int i = 0; i <= 8; i ++){
+        for(int j = i % 2; j <= 8; j += 2){
+            hexa_array[i][j]->setNeighbors();
+        }
+    }
+
     for(int i = 0; i < 3; i++){
         Agent * a = new Agent('1', this, this);
         a->setGeometry(50, 70 * (i + 1), 50, 50);
@@ -91,9 +101,14 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
 
     setMaximumSize(800, 600);
     setMinimumSize(800, 600);
+
+    in_range_system = new InRangeSystem(this);
+    queue <Hexa *> q = in_range_system->Find_in_range(hexa_array[5][5], 2);
+    while(!q.empty()){
+        qDebug() << q.front()->get_i() << ", " << q.front()->get_j();
+        q.pop();
+    }
 }
-
-
 
 play_page::~play_page()
 {
