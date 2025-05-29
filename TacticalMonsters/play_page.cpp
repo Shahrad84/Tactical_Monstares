@@ -7,6 +7,7 @@
 #include "QString"
 #include "inrangesystem.h"
 #include <queue>
+#include "floating.h"
 using std::queue;
 
 
@@ -88,12 +89,12 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     }
 
     for(int i = 0; i < 3; i++){
-        Agent * a = new Agent('1', this, this);
+        Agent * a = new Floating('1', this, this, "Sabrina");
         a->setGeometry(50, 70 * (i + 1), 50, 50);
     }
 
     for(int i = 0; i < 3; i++){
-        Agent * a = new Agent('2', this, this);
+        Agent * a = new Floating('2', this, this, "Death");
         a->setGeometry(680, 70 * (i + 1), 50, 50);
     }
 

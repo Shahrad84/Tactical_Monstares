@@ -112,7 +112,7 @@ background-color: rgba(0, 0, 255, 70);</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="background_label">
     <property name="geometry">
      <rect>
       <x>-110</x>
@@ -128,9 +128,34 @@ background-color: rgba(0, 0, 255, 70);</string>
      <string>Player  1 :</string>
     </property>
    </widget>
-   <zorder>label</zorder>
+   <widget class="QLabel" name="Rull_label">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>60</y>
+      <width>461</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>background_label</zorder>
    <zorder>player1_groupBox</zorder>
    <zorder>player2_groupBox</zorder>
+   <zorder>Rull_label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

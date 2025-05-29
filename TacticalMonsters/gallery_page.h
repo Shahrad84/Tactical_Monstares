@@ -2,6 +2,7 @@
 #define GALLERY_PAGE_H
 
 #include <QMainWindow>
+#include "agent.h"
 
 namespace Ui {
 class gallery_page;

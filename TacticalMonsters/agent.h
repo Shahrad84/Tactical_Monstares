@@ -8,8 +8,10 @@
 #include <QMouseEvent>
 #include <QObject>
 #include <play_page.h>
+#include "string"
+using std::string;
 
-
+//#include "floating.h"
 class Hexa;
 
 class Agent : public QLabel
@@ -17,7 +19,7 @@ class Agent : public QLabel
     Q_OBJECT
 
 public:
-    explicit Agent(char player_type, QWidget* parent, play_page * page);
+    Agent(char player_type, QWidget* parent, play_page * page, string input_name);
     void Move(Hexa* new_hexa);
 
     static Agent * clicked_agent;
@@ -37,6 +39,13 @@ signals:
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;
+    virtual void Render_Agent();
+
+    int HP;
+    int mobility;
+    int attackRange;
+    int damage;
+    string name;
 };
 
 

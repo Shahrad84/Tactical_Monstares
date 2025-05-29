@@ -10,21 +10,29 @@ CONFIG += c++17
 
 SOURCES += \
     agent.cpp \
+    floating.cpp \
+    flying.cpp \
     gallery_page.cpp \
+    grounded.cpp \
     hexa.cpp \
     inrangesystem.cpp \
     main.cpp \
     menu_page.cpp \
     play_page.cpp \
+    waterwaking.cpp \
     welcome_page.cpp
 
 HEADERS += \
     agent.h \
+    floating.h \
+    flying.h \
     gallery_page.h \
+    grounded.h \
     hexa.h \
     inrangesystem.h \
     menu_page.h \
     play_page.h \
+    waterwaking.h \
     welcome_page.h
 
 FORMS += \

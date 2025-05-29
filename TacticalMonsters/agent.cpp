@@ -38,7 +38,7 @@ void Agent::Move(Hexa * new_hexa){
     }
 }
 
-Agent::Agent(char player_type, QWidget * parent, play_page * page) : QLabel(parent){
+Agent::Agent(char player_type, QWidget * parent, play_page * page, string input_name) : QLabel(parent){
 
     if(playPage == nullptr){
         playPage = page;
@@ -46,16 +46,21 @@ Agent::Agent(char player_type, QWidget * parent, play_page * page) : QLabel(pare
 
     size = 50;
     player_1_or_2 = player_type;
+    name = input_name;
 
+    //Render_Agent();
+
+    located_hexa = nullptr;
+    Move(nullptr);
+
+    setMouseTracking(true);
+}
+
+void Agent::Render_Agent(){
     if(player_1_or_2 == '1'){
         setStyleSheet("image: url(:/new/prefix1/heros/hero1.png);");
     }
     else if(player_1_or_2 == '2'){
         setStyleSheet("image: url(:/new/prefix1/heros/hero2.png);");
     }
-
-    located_hexa = nullptr;
-    Move(nullptr);
-
-    setMouseTracking(true);
 }

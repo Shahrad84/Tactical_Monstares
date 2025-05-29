@@ -16,5 +16,7 @@
         <file>hex_ver_w.png</file>
         <file>hex_ver_g.png</file>
         <file>hex_ver_d.png</file>
+        <file>heros/Death.png</file>
+        <file>heros/Sabrina.png</file>
     </qresource>
 </RCC>
