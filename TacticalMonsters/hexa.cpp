@@ -12,7 +12,7 @@ play_page * Hexa::playPage = nullptr;
 
 void Hexa::mousePressEvent(QMouseEvent* event){
     if(event->button() == Qt::LeftButton){
-        if(Agent::clicked_agent != nullptr && located_agent == nullptr && Agent::clicked_agent->player_1_or_2 == this->type){
+        if(Agent::clicked_agent != nullptr && located_agent == nullptr && Agent::clicked_agent->is_hexa_compatible_with_agent(this)){
 
             emit clicked();
 
@@ -30,6 +30,7 @@ void Hexa::mousePressEvent(QMouseEvent* event){
             }
 
             playPage->change_turn();
+            playPage->level_maganer->Update();
 
         }
     }
@@ -37,10 +38,9 @@ void Hexa::mousePressEvent(QMouseEvent* event){
     QLabel::mousePressEvent(event);
 }
 
-void Hexa::Set_type(char input_type = 'p'){
+void Hexa::Set_type(char input_type){
 
     type = input_type;
-    //setStyleSheet("image: url(:/new/prefix1/hex_ver_1.png);");
 
     switch (type) {
     case 'p':
@@ -72,7 +72,6 @@ void Hexa::Set_type(char input_type = 'p'){
         break;
     }
 
-
 }
 
 
@@ -82,7 +81,6 @@ Hexa::Hexa(int row, int col, QWidget *parent, play_page * page) : QLabel(parent)
         playPage = page;
     }
 
-    Set_type();
     setFont(QFont("Arial", 12, QFont::Bold));
     setAlignment(Qt::AlignCenter);
 

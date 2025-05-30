@@ -9,10 +9,12 @@
 #include <QTextStream>
 #include <QVector>
 #include <QString>
+#include "levelmanager.h"
 
 using std::vector;
 
 class Hexa;
+class Agent;
 class InRangeSystem;
 
 namespace Ui {
@@ -33,6 +35,12 @@ public:
     Hexa * hexa_array[9][9];
 
     InRangeSystem * in_range_system;
+
+    vector <Agent * > player_1_agents;
+    vector <Agent * > player_2_agents;
+
+    LevelManager * level_maganer;
+    void write_on_RullLabel(string);
 
 private:
 

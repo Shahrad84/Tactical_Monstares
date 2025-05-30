@@ -134,12 +134,12 @@ background-color: rgba(0, 0, 255, 70);</string>
       <x>170</x>
       <y>60</y>
       <width>461</width>
-      <height>21</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>20</pointsize>
+      <pointsize>15</pointsize>
      </font>
     </property>
     <property name="styleSheet">

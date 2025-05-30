@@ -11,7 +11,7 @@ Agent * Agent::clicked_agent = nullptr;
 
 void Agent::mousePressEvent(QMouseEvent* event)
 {
-    if (event->button() == Qt::LeftButton && playPage->turn == player_1_or_2)
+    if (event->button() == Qt::LeftButton && playPage->turn == ownership)
     {
         clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
         size = (clicked_agent == this) ? 60 : 50;
@@ -38,14 +38,17 @@ void Agent::Move(Hexa * new_hexa){
     }
 }
 
-Agent::Agent(char player_type, QWidget * parent, play_page * page, string input_name) : QLabel(parent){
+Agent::Agent(char input_ownership, QWidget * parent, play_page * page, string input_name) : QLabel(parent){
 
     if(playPage == nullptr){
         playPage = page;
     }
 
     size = 50;
-    player_1_or_2 = player_type;
+
+    ownership = input_ownership;
+    compatible_hexa_types.push_back(ownership);
+
     name = input_name;
 
     //Render_Agent();
@@ -57,10 +60,30 @@ Agent::Agent(char player_type, QWidget * parent, play_page * page, string input_
 }
 
 void Agent::Render_Agent(){
-    if(player_1_or_2 == '1'){
+    if(ownership == '1'){
         setStyleSheet("image: url(:/new/prefix1/heros/hero1.png);");
     }
-    else if(player_1_or_2 == '2'){
+    else if(ownership == '2'){
         setStyleSheet("image: url(:/new/prefix1/heros/hero2.png);");
     }
+}
+
+void Agent::LockAgent(bool lockMode){
+    setEnabled(!lockMode);
+    isLock = lockMode;
+}
+
+bool Agent::get_isLock(){
+    return isLock;
+}
+
+bool Agent::is_hexa_compatible_with_agent(Hexa * target_hexa){
+
+    for(int i = 0; i < compatible_hexa_types.size(); i++){
+        if(compatible_hexa_types[i] == target_hexa->get_type()){
+            return true;
+        }
+    }
+
+    return false;
 }

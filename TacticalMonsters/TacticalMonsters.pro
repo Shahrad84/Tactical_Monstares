@@ -16,6 +16,7 @@ SOURCES += \
     grounded.cpp \
     hexa.cpp \
     inrangesystem.cpp \
+    levelmanager.cpp \
     main.cpp \
     menu_page.cpp \
     play_page.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     grounded.h \
     hexa.h \
     inrangesystem.h \
+    levelmanager.h \
     menu_page.h \
     play_page.h \
     waterwaking.h \

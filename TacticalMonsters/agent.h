@@ -9,7 +9,10 @@
 #include <QObject>
 #include <play_page.h>
 #include "string"
+#include "vector"
+
 using std::string;
+using std::vector;
 
 //#include "floating.h"
 class Hexa;
@@ -19,14 +22,20 @@ class Agent : public QLabel
     Q_OBJECT
 
 public:
-    Agent(char player_type, QWidget* parent, play_page * page, string input_name);
+    Agent(char input_ownership, QWidget* parent, play_page * page, string input_name);
     void Move(Hexa* new_hexa);
 
     static Agent * clicked_agent;
     Hexa * located_hexa;
-    char player_1_or_2;
+    char ownership;
 
     static play_page * playPage;
+    void LockAgent(bool);
+    bool get_isLock();
+
+
+    vector <QChar> compatible_hexa_types;
+    bool is_hexa_compatible_with_agent(Hexa *);
 
 private:
     char type;
@@ -46,6 +55,8 @@ protected:
     int attackRange;
     int damage;
     string name;
+
+    bool isLock;
 };
 
 

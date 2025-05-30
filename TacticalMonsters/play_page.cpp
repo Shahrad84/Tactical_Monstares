@@ -8,6 +8,8 @@
 #include "inrangesystem.h"
 #include <queue>
 #include "floating.h"
+#include "levelmanager.h";
+
 using std::queue;
 
 
@@ -48,7 +50,9 @@ void play_page::parse(const QString &filepath) {
         for(int j = i % 2; j <= 8; j+= 2){
 
             extracted_datas_from_txtFile[i][j] = lines_QStringArray[i + 1][3 * j + 1];
-
+            if(extracted_datas_from_txtFile[i][j].toLatin1() == ' '){
+                extracted_datas_from_txtFile[i][j] = QChar('p');
+            }
         }
     }
 
@@ -88,14 +92,16 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
         }
     }
 
+    player_1_agents.resize(3);
     for(int i = 0; i < 3; i++){
-        Agent * a = new Floating('1', this, this, "Sabrina");
-        a->setGeometry(50, 70 * (i + 1), 50, 50);
+        player_1_agents[i] = new Floating('1', this, this, "Sabrina");
+        player_1_agents[i]->setGeometry(50, 70 * (i + 1), 50, 50);
     }
 
+    player_2_agents.resize(3);
     for(int i = 0; i < 3; i++){
-        Agent * a = new Floating('2', this, this, "Death");
-        a->setGeometry(680, 70 * (i + 1), 50, 50);
+        player_2_agents[i] = new Floating('2', this, this, "Death");
+        player_2_agents[i]->setGeometry(680, 70 * (i + 1), 50, 50);
     }
 
     setWindowTitle("play_page");
@@ -111,9 +117,15 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     //     q.pop();
     // }
     // hexa_array[5][5]->Set_type('d');
+
+    level_maganer = new LevelManager(this);
 }
 
 play_page::~play_page()
 {
     delete ui;
+}
+
+void play_page::write_on_RullLabel(string str){
+    ui->Rull_label->setText(QString::fromStdString(str));
 }
