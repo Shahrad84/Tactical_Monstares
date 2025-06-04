@@ -5,8 +5,13 @@
 
 class Flying : public Agent
 {
+
 public:
-    Flying();
+    Flying(char player_type, QWidget* parent, play_page * page, string input_name);
+
+private:
+    void setWariourProperties();
+    //void Render_Agent();
 };
 
 #endif // FLYING_H

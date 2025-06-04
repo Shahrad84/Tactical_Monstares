@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     agent.cpp \
+    deckset.cpp \
     floating.cpp \
     flying.cpp \
     gallery_page.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     agent.h \
+    deckset.h \
     floating.h \
     flying.h \
     gallery_page.h \
@@ -38,6 +40,7 @@ HEADERS += \
     welcome_page.h
 
 FORMS += \
+    deckset.ui \
     gallery_page.ui \
     menu_page.ui \
     play_page.ui \

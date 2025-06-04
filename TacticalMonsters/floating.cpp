@@ -22,6 +22,6 @@ void Floating::setWariourProperties(){
     }
 }
 
-void Floating::Render_Agent(){
-    setStyleSheet("image: url(:/new/prefix1/heros/" + QString::fromStdString(name) + ".png);");
-}
+// void Floating::Render_Agent(){
+//     setStyleSheet("image: url(:/new/prefix1/heros/" + QString::fromStdString(name) + ".png);");
+// }

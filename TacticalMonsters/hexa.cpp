@@ -56,11 +56,11 @@ void Hexa::Set_type(char input_type){
         break;
 
     case '~':
-        setStyleSheet("image: url(:/new/prefix1/hex_ver_w.png);");
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_~.png);");
         break;
 
     case '#':
-        setStyleSheet("image: url(:/new/prefix1/hex_ver_r.png);");
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_m.png);");
         break;
 
     case 'g':

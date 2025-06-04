@@ -51,7 +51,7 @@ Agent::Agent(char input_ownership, QWidget * parent, play_page * page, string in
 
     name = input_name;
 
-    //Render_Agent();
+    Render_Agent();
 
     located_hexa = nullptr;
     Move(nullptr);
@@ -60,12 +60,14 @@ Agent::Agent(char input_ownership, QWidget * parent, play_page * page, string in
 }
 
 void Agent::Render_Agent(){
-    if(ownership == '1'){
-        setStyleSheet("image: url(:/new/prefix1/heros/hero1.png);");
-    }
-    else if(ownership == '2'){
-        setStyleSheet("image: url(:/new/prefix1/heros/hero2.png);");
-    }
+    // if(ownership == '1'){
+    //     setStyleSheet("image: url(:/new/prefix1/heros/hero1.png);");
+    // }
+    // else if(ownership == '2'){
+    //     setStyleSheet("image: url(:/new/prefix1/heros/hero2.png);");
+    // }
+
+    setStyleSheet("image: url(:/new/prefix1/heros/" + QString::fromStdString(name) + ".png);");
 }
 
 void Agent::LockAgent(bool lockMode){

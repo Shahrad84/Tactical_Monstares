@@ -6,13 +6,12 @@
 class Floating : public Agent
 {
 
-
 public:
     Floating(char player_type, QWidget* parent, play_page * page, string input_name);
 
 private:
     void setWariourProperties();
-    void Render_Agent();
+    //void Render_Agent();
 };
 
 #endif // FLOATING_H
