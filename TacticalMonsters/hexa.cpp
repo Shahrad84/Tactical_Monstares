@@ -12,26 +12,29 @@ play_page * Hexa::playPage = nullptr;
 
 void Hexa::mousePressEvent(QMouseEvent* event){
     if(event->button() == Qt::LeftButton){
-        if(Agent::clicked_agent != nullptr && located_agent == nullptr && Agent::clicked_agent->is_hexa_compatible_with_agent(this)){
+        if(Agent::clicked_agent != nullptr && located_agent == nullptr){
 
-            emit clicked();
+            if((playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_movebale_hexas())) || !Agent::clicked_agent->located_hexa){
+                emit clicked();
 
-            Hexa * last_hexa = Agent::clicked_agent->located_hexa;
+                Hexa * last_hexa = Agent::clicked_agent->located_hexa;
 
-            Agent::clicked_agent->located_hexa = this;
+                Agent::clicked_agent->located_hexa = this;
 
-            this->located_agent = Agent::clicked_agent;
+                this->located_agent = Agent::clicked_agent;
 
-            Agent::clicked_agent->Move(this);
-            Agent::clicked_agent = nullptr;
+                Agent::clicked_agent->Move(this);
+                Agent::clicked_agent = nullptr;
 
-            if(last_hexa != nullptr){
-                last_hexa->located_agent = nullptr;
+                if(last_hexa != nullptr){
+                    last_hexa->located_agent = nullptr;
+                }
+
+                playPage->change_turn();
+                playPage->level_maganer->Update();
+
+                playPage->in_range_system->clear_queue_and_vector();
             }
-
-            playPage->change_turn();
-            playPage->level_maganer->Update();
-
         }
     }
 
@@ -39,10 +42,13 @@ void Hexa::mousePressEvent(QMouseEvent* event){
 }
 
 void Hexa::Set_type(char input_type){
-
     type = input_type;
+    Render(type);
+}
 
-    switch (type) {
+void Hexa::Render(char ch){
+
+    switch (ch) {
     case 'p':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_p.png);");
         break;
@@ -53,6 +59,10 @@ void Hexa::Set_type(char input_type){
 
     case '2':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_2.png);");
+        break;
+
+    case 'y':
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_y.png);");
         break;
 
     case '~':
@@ -70,7 +80,13 @@ void Hexa::Set_type(char input_type){
     case 'd':
         setStyleSheet("image: url(:/new/prefix1/hex_ver_d.png);");
         break;
+
+    case 'r':
+        setStyleSheet("image: url(:/new/prefix1/hex_ver_r.png);");
+        break;
     }
+
+    qDebug() << ch;
 
 }
 
@@ -143,3 +159,7 @@ Hexa * Hexa::get_member_of_neighbors(int index){
     return neighbors[index];
 }
 
+
+void Hexa::printStatus(){
+    qDebug() << get_i() << get_j();
+}

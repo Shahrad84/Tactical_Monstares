@@ -22,6 +22,7 @@ public:
     ~Hexa();
 
     void Set_type(char input_type);
+    void Render(char ch);
 
     //void Determine_x_and_y(int row, int col);
 
@@ -41,6 +42,7 @@ public:
     int get_j();
     Hexa * get_member_of_neighbors(int);
     void setNeighbors();
+    void printStatus();
 
 private:
     int x_pos;

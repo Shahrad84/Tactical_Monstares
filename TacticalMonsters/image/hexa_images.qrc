@@ -2,7 +2,6 @@
     <qresource prefix="/new/prefix1">
         <file>hex_ver_1.png</file>
         <file>hex_ver_2.png</file>
-        <file>hex_ver_4.png</file>
         <file>heros/hero1.png</file>
         <file>heros/hero2.png</file>
         <file>background/16_07_55_raw.jpg</file>
@@ -19,5 +18,6 @@
         <file>hex_ver_~.png</file>
         <file>hex_ver_r.png</file>
         <file>hex_ver_m.png</file>
+        <file>hex_ver_y.png</file>
     </qresource>
 </RCC>

@@ -66,8 +66,10 @@ void play_page::parse(const QString &filepath) {
 play_page::play_page(QString player_1_name, QString player_2_name, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::play_page)
-{
+{    
     ui->setupUi(this);
+
+    in_range_system = new InRangeSystem(this);
 
     ui->player1_groupBox->setTitle(player_1_name);
     ui->player2_groupBox->setTitle(player_2_name);
@@ -109,7 +111,6 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     setMaximumSize(800, 600);
     setMinimumSize(800, 600);
 
-    in_range_system = new InRangeSystem(this);
     // queue <Hexa *> q = in_range_system->Find_in_range(hexa_array[5][5], 3);
     // while(!q.empty()){
     //     qDebug() << q.front()->get_i() << ", " << q.front()->get_j();

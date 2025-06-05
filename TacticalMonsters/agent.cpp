@@ -4,15 +4,23 @@
 #include <QMouseEvent>
 #include <play_page.h>
 #include <QDebug>
+#include "queue"
+using std::queue;
 
 play_page * Agent::playPage = nullptr;
 
 Agent * Agent::clicked_agent = nullptr;
 
+InRangeSystem * Agent::in_range_system = nullptr;
+
 void Agent::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton && playPage->turn == ownership)
     {
+        if(located_hexa != nullptr){
+            playPage->in_range_system->Find_in_range(this, mobility);
+        }
+
         clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
         size = (clicked_agent == this) ? 60 : 50;
         resize(size, size);
@@ -47,7 +55,7 @@ Agent::Agent(char input_ownership, QWidget * parent, play_page * page, string in
     size = 50;
 
     ownership = input_ownership;
-    compatible_hexa_types.push_back(ownership);
+    compatible_types_to_LOCATE.push_back(ownership);
 
     name = input_name;
 
@@ -79,10 +87,10 @@ bool Agent::get_isLock(){
     return isLock;
 }
 
-bool Agent::is_hexa_compatible_with_agent(Hexa * target_hexa){
+bool Agent::is_hexa_compatible(Hexa * target_hexa, vector <char> v){
 
-    for(int i = 0; i < compatible_hexa_types.size(); i++){
-        if(compatible_hexa_types[i] == target_hexa->get_type()){
+    for(int i = 0; i < v.size(); i++){
+        if(v[i] == target_hexa->get_type()){
             return true;
         }
     }

@@ -10,6 +10,7 @@
 #include <play_page.h>
 #include "string"
 #include "vector"
+#include "inrangesystem.h"
 
 using std::string;
 using std::vector;
@@ -34,14 +35,16 @@ public:
     bool get_isLock();
 
 
-    vector <QChar> compatible_hexa_types;
-    bool is_hexa_compatible_with_agent(Hexa *);
+    vector <char> compatible_types_to_LOCATE;
+    vector <char> compatible_types_to_PASS;
+    bool is_hexa_compatible(Hexa *, vector <char>);
 
 private:
     char type;
     int x_pos;
     int y_pos;
     int size;
+    static InRangeSystem * in_range_system;
 
 signals:
     void clicked();

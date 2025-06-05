@@ -36,8 +36,8 @@ void LevelManager::Go_to_level_Fight(){
         playPage->player_1_agents[i]->LockAgent(false);
         playPage->player_2_agents[i]->LockAgent(false);
 
-        playPage->player_1_agents[i]->compatible_hexa_types.push_back('p');
-        playPage->player_2_agents[i]->compatible_hexa_types.push_back('p');
+        playPage->player_1_agents[i]->compatible_types_to_LOCATE.push_back('p');
+        playPage->player_2_agents[i]->compatible_types_to_LOCATE.push_back('p');
     }
 
     playPage->write_on_RullLabel("Fight");

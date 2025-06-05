@@ -5,6 +5,11 @@ Floating::Floating(char player_type, QWidget* parent, play_page * page, string i
     : Agent(player_type, parent, page, input_name)
 {
     Render_Agent();
+    setWariourProperties();
+
+    compatible_types_to_PASS.push_back('p');
+    compatible_types_to_PASS.push_back('~');
+    compatible_types_to_PASS.push_back('#');
 }
 
 void Floating::setWariourProperties(){
