@@ -103,13 +103,13 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     player_2_agents.resize(3);
     for(int i = 0; i < 3; i++){
         player_2_agents[i] = new Floating('2', this, this, "Death");
-        player_2_agents[i]->setGeometry(680, 70 * (i + 1), 50, 50);
+        player_2_agents[i]->setGeometry(1260, 70 * (i + 1), 50, 50);
     }
 
     setWindowTitle("play_page");
 
-    setMaximumSize(800, 600);
-    setMinimumSize(800, 600);
+    setMaximumSize(1400, 840);
+    setMinimumSize(1400, 840);
 
     // queue <Hexa *> q = in_range_system->Find_in_range(hexa_array[5][5], 3);
     // while(!q.empty()){

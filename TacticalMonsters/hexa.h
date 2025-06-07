@@ -61,6 +61,8 @@ private:
 
     int i, j;
 
+    int size = 90;
+
 
 
 protected:

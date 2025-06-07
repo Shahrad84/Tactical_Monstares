@@ -22,6 +22,8 @@ public:
 
     queue <Hexa *> get_attackable_hexas();
     queue <Hexa *> get_movebale_hexas();
+    Hexa * movebale_hexas_with_index(int);
+
 
     bool find_in_queue(Hexa * data, queue<Hexa *> input_q);
     void clear_queue_and_vector();

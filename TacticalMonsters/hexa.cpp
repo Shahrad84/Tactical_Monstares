@@ -5,6 +5,7 @@
 #include "QDebug"
 #include "QMessageBox"
 #include "play_page.h"
+#include "random"
 
 class Agent;
 
@@ -12,6 +13,7 @@ play_page * Hexa::playPage = nullptr;
 
 void Hexa::mousePressEvent(QMouseEvent* event){
     if(event->button() == Qt::LeftButton){
+
         if(Agent::clicked_agent != nullptr && located_agent == nullptr){
 
             if((playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_movebale_hexas())) || !Agent::clicked_agent->located_hexa){
@@ -34,6 +36,25 @@ void Hexa::mousePressEvent(QMouseEvent* event){
                 playPage->level_maganer->Update();
 
                 playPage->in_range_system->clear_queue_and_vector();
+            }
+        }
+
+        else if(Agent::clicked_agent != nullptr && located_agent->ownership != Agent::clicked_agent->ownership){
+            if(playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_attackable_hexas())){
+                //qDebug() << "attack";
+                Agent::clicked_agent->Attack(located_agent);
+
+                playPage->change_turn();
+                playPage->level_maganer->Update();
+
+                playPage->in_range_system->clear_queue_and_vector();
+                playPage->in_range_system->Find_in_range(located_agent, 1);
+
+
+                int r = rand() % playPage->in_range_system->get_movebale_hexas().size();
+                Agent::clicked_agent->Move(playPage->in_range_system->movebale_hexas_with_index(r));
+                playPage->in_range_system->clear_queue_and_vector();
+                Agent::clicked_agent = nullptr;
             }
         }
     }
@@ -86,8 +107,6 @@ void Hexa::Render(char ch){
         break;
     }
 
-    qDebug() << ch;
-
 }
 
 
@@ -100,9 +119,9 @@ Hexa::Hexa(int row, int col, QWidget *parent, play_page * page) : QLabel(parent)
     setFont(QFont("Arial", 12, QFont::Bold));
     setAlignment(Qt::AlignCenter);
 
-    x_pos = 220 + 38 * col;
-    y_pos = 170 + 23 * row;
-    setGeometry(x_pos, y_pos, 50, 50);
+    x_pos = 390 + 70 * col;
+    y_pos = 200 + 40 * row;
+    setGeometry(x_pos, y_pos, size, size);
 
     setAlignment(Qt::AlignCenter);
 

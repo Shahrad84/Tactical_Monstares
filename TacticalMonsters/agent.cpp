@@ -17,13 +17,31 @@ void Agent::mousePressEvent(QMouseEvent* event)
 {
     if (event->button() == Qt::LeftButton && playPage->turn == ownership)
     {
-        if(located_hexa != nullptr){
-            playPage->in_range_system->Find_in_range(this, mobility);
+        //Agent * priviousClicked = clicked_agent;
+
+        if(clicked_agent == this){
+            size = 50;
+            resize(size, size);
+            playPage->in_range_system->clear_queue_and_vector();
+            clicked_agent = nullptr;
+        }
+        else{
+            clicked_agent = this;
+            size = 60;
+            resize(size, size);
+            if(located_hexa != nullptr){
+                playPage->in_range_system->Find_in_range(this, mobility);
+            }
         }
 
-        clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
-        size = (clicked_agent == this) ? 60 : 50;
-        resize(size, size);
+
+        // if(located_hexa != nullptr){
+        //     playPage->in_range_system->Find_in_range(this, mobility);
+        // }
+
+        // clicked_agent = (clicked_agent == nullptr) ? this : nullptr;
+        // size = (clicked_agent == this) ? 60 : 50;
+        // resize(size, size);
 
         emit clicked();
 
@@ -40,7 +58,7 @@ void Agent::Move(Hexa * new_hexa){
     }
     else{
         size = 50;
-        setGeometry(located_hexa->get_x_position(), located_hexa->get_y_position(), size, size);
+        setGeometry(located_hexa->get_x_position() + 5, located_hexa->get_y_position() + 5, size, size);
 
         located_hexa->located_agent = this;
     }
@@ -96,4 +114,23 @@ bool Agent::is_hexa_compatible(Hexa * target_hexa, vector <char> v){
     }
 
     return false;
+}
+
+void Agent::Attack(Agent * target_agent){
+    target_agent->reduce_HP(damage);
+    reduce_HP(target_agent->get_damage() / 2);
+}
+
+int Agent::get_HP(){return HP;}
+int Agent::get_damage(){return damage;}
+
+void Agent::reduce_HP(int decrement){
+    HP -= decrement;
+    qDebug() << HP;
+    if(HP <= 0){
+        //this = nullptr;
+        qDebug() << "RIP";
+        // Move(nullptr);
+        // this->~Agent();
+    }
 }

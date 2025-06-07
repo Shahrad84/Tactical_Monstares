@@ -39,6 +39,13 @@ public:
     vector <char> compatible_types_to_PASS;
     bool is_hexa_compatible(Hexa *, vector <char>);
 
+
+    void Attack(Agent *);
+
+    void reduce_HP(int);
+    int get_HP();
+    int get_damage();
+
 private:
     char type;
     int x_pos;

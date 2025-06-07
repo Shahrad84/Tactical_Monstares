@@ -13,6 +13,7 @@ void InRangeSystem::Find_in_range(Agent * agent, int range){
     int depth = 0;
     //clear_queue_and_vector();
 
+    qDebug() << "======";
 
     inProcess.push(origin);
     visited.push_back(origin);
@@ -34,8 +35,9 @@ void InRangeSystem::Find_in_range(Agent * agent, int range){
                         inProcess.push(neighbor);
                         moveable_hexas.push(neighbor);
                     }
-                    else if(neighbor->located_agent->ownership != agent->ownership){
+                    else if(neighbor->located_agent->ownership != agent->ownership && !find_in_queue(neighbor, attackable_hexas)){
                         attackable_hexas.push(neighbor);
+                        //qDebug() << "attackable hexa with index" << neighbor->get_i() << neighbor->get_j();
                     }
                 }
             }
@@ -45,8 +47,6 @@ void InRangeSystem::Find_in_range(Agent * agent, int range){
 
     reDraw_hexa(moveable_hexas, 'y', "draw");
     reDraw_hexa(attackable_hexas, 'r', "draw");
-
-    qDebug() << "Find_in_range";
 }
 
 void InRangeSystem::clear_queue_and_vector(){
@@ -101,4 +101,12 @@ queue <Hexa *> InRangeSystem::get_attackable_hexas(){
 }
 queue <Hexa *> InRangeSystem::get_movebale_hexas(){
     return moveable_hexas;
+}
+Hexa * InRangeSystem::movebale_hexas_with_index(int i){
+    for(int i = 0; i < moveable_hexas.size() - 1; i++){
+        moveable_hexas.front()->Render('p');
+        moveable_hexas.pop();
+    }
+
+    return moveable_hexas.front();
 }
