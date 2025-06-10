@@ -24,6 +24,7 @@ class Agent : public QLabel
 
 public:
     Agent(char input_ownership, QWidget* parent, play_page * page, string input_name);
+    ~Agent();
     void Move(Hexa* new_hexa);
 
     static Agent * clicked_agent;
@@ -45,6 +46,8 @@ public:
     void reduce_HP(int);
     int get_HP();
     int get_damage();
+
+    virtual void Unlock_allCompatibleHexas() = 0;
 
 private:
     char type;

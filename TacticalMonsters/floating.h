@@ -8,6 +8,7 @@ class Floating : public Agent
 
 public:
     Floating(char player_type, QWidget* parent, play_page * page, string input_name);
+    void Unlock_allCompatibleHexas();
 
 private:
     void setWariourProperties();

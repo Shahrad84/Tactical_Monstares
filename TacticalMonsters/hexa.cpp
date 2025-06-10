@@ -16,20 +16,21 @@ void Hexa::mousePressEvent(QMouseEvent* event){
 
         if(Agent::clicked_agent != nullptr && located_agent == nullptr){
 
-            if((playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_movebale_hexas())) || !Agent::clicked_agent->located_hexa){
+            if(((playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_movebale_hexas())) || !Agent::clicked_agent->located_hexa)
+                && Agent::clicked_agent->is_hexa_compatible(this, Agent::clicked_agent->compatible_types_to_LOCATE)){
                 emit clicked();
 
-                Hexa * last_hexa = Agent::clicked_agent->located_hexa;
+                Hexa * privious_hexa = Agent::clicked_agent->located_hexa;
 
                 Agent::clicked_agent->located_hexa = this;
 
-                this->located_agent = Agent::clicked_agent;
+                located_agent = Agent::clicked_agent;
 
                 Agent::clicked_agent->Move(this);
                 Agent::clicked_agent = nullptr;
 
-                if(last_hexa != nullptr){
-                    last_hexa->located_agent = nullptr;
+                if(privious_hexa != nullptr){
+                    privious_hexa->located_agent = nullptr;
                 }
 
                 playPage->change_turn();
@@ -41,20 +42,26 @@ void Hexa::mousePressEvent(QMouseEvent* event){
 
         else if(Agent::clicked_agent != nullptr && located_agent->ownership != Agent::clicked_agent->ownership){
             if(playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_attackable_hexas())){
-                //qDebug() << "attack";
-                Agent::clicked_agent->Attack(located_agent);
 
-                playPage->change_turn();
-                playPage->level_maganer->Update();
+
+                Agent::clicked_agent->Attack(located_agent);
 
                 playPage->in_range_system->clear_queue_and_vector();
                 playPage->in_range_system->Find_in_range(located_agent, 1);
 
+                Hexa * privious_hexa = Agent::clicked_agent->located_hexa;
 
                 int r = rand() % playPage->in_range_system->get_movebale_hexas().size();
                 Agent::clicked_agent->Move(playPage->in_range_system->movebale_hexas_with_index(r));
                 playPage->in_range_system->clear_queue_and_vector();
+
+                //Agent::clicked_agent->located_hexa = nullptr;
                 Agent::clicked_agent = nullptr;
+                //located_agent = nullptr;
+
+                privious_hexa->located_agent = nullptr;
+                playPage->change_turn();
+                playPage->level_maganer->Update();
             }
         }
     }

@@ -118,7 +118,9 @@ bool Agent::is_hexa_compatible(Hexa * target_hexa, vector <char> v){
 
 void Agent::Attack(Agent * target_agent){
     target_agent->reduce_HP(damage);
-    reduce_HP(target_agent->get_damage() / 2);
+    if(target_agent->get_HP() > 0){
+        reduce_HP(target_agent->get_damage() / 2);
+    }
 }
 
 int Agent::get_HP(){return HP;}
@@ -128,9 +130,13 @@ void Agent::reduce_HP(int decrement){
     HP -= decrement;
     qDebug() << HP;
     if(HP <= 0){
-        //this = nullptr;
         qDebug() << "RIP";
-        // Move(nullptr);
-        // this->~Agent();
+        this->deleteLater();
     }
+}
+
+Agent::~Agent(){
+    Hexa * privious_hexa = located_hexa;
+    located_hexa = nullptr;
+    privious_hexa->located_agent = nullptr;
 }

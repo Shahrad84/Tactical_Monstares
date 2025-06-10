@@ -6,10 +6,6 @@ Floating::Floating(char player_type, QWidget* parent, play_page * page, string i
 {
     Render_Agent();
     setWariourProperties();
-
-    compatible_types_to_PASS.push_back('p');
-    compatible_types_to_PASS.push_back('~');
-    compatible_types_to_PASS.push_back('#');
 }
 
 void Floating::setWariourProperties(){
@@ -25,6 +21,17 @@ void Floating::setWariourProperties(){
         damage = 120;
         attackRange = 2;
     }
+}
+
+
+void Floating::Unlock_allCompatibleHexas(){
+    compatible_types_to_PASS.push_back('p');
+    compatible_types_to_PASS.push_back('~');
+    compatible_types_to_PASS.push_back('#');
+
+    compatible_types_to_LOCATE.push_back('p');
+    compatible_types_to_LOCATE.push_back('~');
+    compatible_types_to_LOCATE.push_back('#');
 }
 
 // void Floating::Render_Agent(){
