@@ -13,7 +13,7 @@ void InRangeSystem::Find_in_range(Agent * agent, int range){
     int depth = 0;
     //clear_queue_and_vector();
 
-    qDebug() << "======";
+    //qDebug() << "======";
 
     inProcess.push(origin);
     visited.push_back(origin);
@@ -64,7 +64,6 @@ void InRangeSystem::reDraw_hexa(queue <Hexa *> q, char type, string mode){
     if(mode == "draw"){
         while(!q.empty()){
             q.front()->Render(type);
-            q.front()->printStatus();
             q.pop();
         }
     }

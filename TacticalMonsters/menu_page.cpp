@@ -3,6 +3,7 @@
 #include "QMessageBox"
 #include "play_page.h"
 #include "gallery_page.h"
+#include "deckset.h"
 
 menu_page::menu_page(QWidget *parent)
     : QMainWindow(parent)
@@ -43,8 +44,9 @@ void menu_page::on_join_pushButton_clicked()
         QMessageBox::warning(this, "error", "every 2 fields must be completed");
     }
     else{
-        play_page * w3 = new play_page(p1_username, p2_username);
-        w3->setWindowTitle("main page");
+        //play_page * w3 = new play_page(p1_username, p2_username);
+        DeckSet * w3 = new DeckSet(p1_username, p2_username);
+        w3->setWindowTitle("deck set page");
         w3->show();
         this->close();
     }

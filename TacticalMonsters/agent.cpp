@@ -128,15 +128,15 @@ int Agent::get_damage(){return damage;}
 
 void Agent::reduce_HP(int decrement){
     HP -= decrement;
-    qDebug() << HP;
     if(HP <= 0){
-        qDebug() << "RIP";
         this->deleteLater();
     }
 }
 
 Agent::~Agent(){
+    qDebug() << "hi";
     Hexa * privious_hexa = located_hexa;
     located_hexa = nullptr;
     privious_hexa->located_agent = nullptr;
+    playPage->level_maganer->agentDied(ownership);
 }

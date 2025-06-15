@@ -8,5 +8,6 @@
         <file>grid6.txt</file>
         <file>grid7.txt</file>
         <file>grid8.txt</file>
+        <file>agents.csv</file>
     </qresource>
 </RCC>

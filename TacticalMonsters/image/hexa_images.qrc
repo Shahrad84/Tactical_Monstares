@@ -19,5 +19,27 @@
         <file>hex_ver_r.png</file>
         <file>hex_ver_m.png</file>
         <file>hex_ver_y.png</file>
+        <file>heros/Angus.png</file>
+        <file>heros/Billy.png</file>
+        <file>heros/Boi.png</file>
+        <file>heros/Bunka.png</file>
+        <file>heros/Colonel Baba.png</file>
+        <file>heros/Duraham.png</file>
+        <file>heros/Eloi.png</file>
+        <file>heros/Elsa.png</file>
+        <file>heros/Frost.png</file>
+        <file>heros/Kabu.png</file>
+        <file>heros/Kanar.png</file>
+        <file>heros/Karissa.png</file>
+        <file>heros/Khan.png</file>
+        <file>heros/Medusa.png</file>
+        <file>heros/Peketon.png</file>
+        <file>heros/Rajakal.png</file>
+        <file>heros/Rambo.png</file>
+        <file>heros/Salih.png</file>
+        <file>heros/Sanka.png</file>
+        <file>heros/Sir Lamorak.png</file>
+        <file>heros/Sir Philip.png</file>
+        <file>heros/Tusk.png</file>
     </qresource>
 </RCC>

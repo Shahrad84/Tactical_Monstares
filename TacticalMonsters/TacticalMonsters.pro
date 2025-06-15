@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     agent.cpp \
+    cart.cpp \
     deckset.cpp \
     floating.cpp \
     flying.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
 
 HEADERS += \
     agent.h \
+    cart.h \
     deckset.h \
     floating.h \
     flying.h \

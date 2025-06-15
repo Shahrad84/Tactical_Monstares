@@ -7,6 +7,9 @@ LevelManager::LevelManager(play_page * parent) {
     level = "Placing";
     playPage->write_on_RullLabel("players must place their agents");
     agentLockCount = 0;
+
+    player_1_remained_agents = playPage->player_1_agents.size();
+    player_2_remained_agents = playPage->player_2_agents.size();
 }
 
 void LevelManager::Update(){
@@ -27,6 +30,31 @@ void LevelManager::Update(){
             Go_to_level_Fight();
         }
     }
+
+    // if(level == "Fight"){
+
+    //     int temp = 0;
+    //     for(int i = 0; i < 3; i++){
+    //         temp = (playPage->player_1_agents[i]) ? temp + 1 : temp;
+    //     }
+    //     player_1_remained_agents = temp;
+
+
+    //     temp = 0;
+    //     for(int i = 0; i < 3; i++){
+    //         temp = (playPage->player_2_agents[i]) ? temp + 1 : temp;
+    //     }
+    //     player_2_remained_agetns = temp;
+
+    //     if(player_1_remained_agents == 0){
+    //         qDebug() << "Player 2 won the game";
+    //         playPage->write_on_RullLabel("Player 2 won the game");
+    //     }
+    //     else if(player_2_remained_agetns == 0){
+    //         qDebug() << "Player 1 won the game";
+    //         playPage->write_on_RullLabel("Player 2 won the game");
+    //     }
+    // }
 }
 
 void LevelManager::Go_to_level_Fight(){
@@ -55,4 +83,27 @@ void LevelManager::Go_to_level_Fight(){
 
 string LevelManager::get_level(){
     return level;
+}
+
+void LevelManager::agentDied(char agentOwnership){
+    if(agentOwnership == '1'){
+        player_1_remained_agents --;
+        qDebug() << player_1_remained_agents;
+
+        if(player_1_remained_agents == 0){
+            qDebug() << "Player 2 won the game";
+            playPage->write_on_RullLabel("Player 2 won the game");
+        }
+    }
+    else if(agentOwnership == '2'){
+        player_2_remained_agents --;
+        qDebug() << player_2_remained_agents;
+
+
+        if(player_2_remained_agents == 0){
+            qDebug() << "Player 1 won the game";
+
+            playPage->write_on_RullLabel("Player 1 won the game");
+        }
+    }
 }

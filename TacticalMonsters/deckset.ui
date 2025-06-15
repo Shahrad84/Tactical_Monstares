@@ -6,88 +6,411 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>800</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox">
+   <widget class="QGroupBox" name="groupBox_p1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>30</y>
-      <width>551</width>
-      <height>711</height>
+      <x>40</x>
+      <y>90</y>
+      <width>721</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>PlayerName</string>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>30</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Set your deck</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>551</width>
-      <height>721</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>GroupBox</string>
-    </property>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>30</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Set your deck</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Peketon.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Angus.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Duraham.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+image: url(:/new/prefix1/heros/Colonel Baba.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Medusa.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Bunka.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sanka.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sir Lamorak.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Kabu.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Salih.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Rajakal.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Khan.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Boi.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Eloi.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Kanar.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Elsa.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Karissa.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sir Philip.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Frost.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Tusk.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Rambo.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -98,86 +421,508 @@ color: rgba(255, 255, 255, 0);</string>
       <string>Agent</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="label_26">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <x>90</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/heros/Death.png);</string>
+      <string notr="true">image: url(:/new/prefix1/heros/Sabrina.png);
+color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Agent</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>231</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Set your deck</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playerSwitch_1_pushBtn">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Player 1's deck</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Play_pushBtn">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>520</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_p2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>721</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>PlayerName</string>
+    </property>
+    <widget class="QLabel" name="label_51">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <x>20</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/heros/Death.png);</string>
+      <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Agent</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_6">
+    <widget class="QLabel" name="label_52">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <x>90</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/heros/Death.png);</string>
+      <string notr="true">image: url(:/new/prefix1/heros/Peketon.png);
+color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Agent</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="label_53">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Angus.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Duraham.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_55">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+image: url(:/new/prefix1/heros/Colonel Baba.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_56">
      <property name="geometry">
       <rect>
        <x>370</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/heros/Death.png);</string>
+      <string notr="true">image: url(:/new/prefix1/heros/Medusa.png);
+color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Agent</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_8">
+    <widget class="QLabel" name="label_57">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>90</y>
-       <width>71</width>
-       <height>81</height>
+       <x>440</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/heros/Death.png);</string>
+      <string notr="true">image: url(:/new/prefix1/heros/Bunka.png);
+color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Agent</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_58">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>310</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sanka.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_59">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sir Lamorak.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_60">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Kabu.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_61">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Salih.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_62">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Rajakal.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_63">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Khan.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_64">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Boi.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_65">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Eloi.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_66">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Kanar.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_67">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Elsa.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_68">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>130</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Karissa.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_69">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sir Philip.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_70">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Frost.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_71">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>210</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Tusk.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_72">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Rambo.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_73">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Death.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_74">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>30</y>
+       <width>50</width>
+       <height>75</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/heros/Sabrina.png);
+color: rgba(255, 255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string>Agent</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="playerSwitch_2_pushBtn">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>50</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Player 2's deck</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -185,7 +930,7 @@ color: rgba(255, 255, 255, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
+     <width>800</width>
      <height>17</height>
     </rect>
    </property>
