@@ -15,9 +15,12 @@ InRangeSystem * Agent::in_range_system = nullptr;
 
 void Agent::mousePressEvent(QMouseEvent* event)
 {
+
+    qDebug() << "ii";
     if (event->button() == Qt::LeftButton && playPage->turn == ownership)
     {
         //Agent * priviousClicked = clicked_agent;
+
 
         if(clicked_agent == this){
             size = 50;
@@ -134,7 +137,6 @@ void Agent::reduce_HP(int decrement){
 }
 
 Agent::~Agent(){
-    qDebug() << "hi";
     Hexa * privious_hexa = located_hexa;
     located_hexa = nullptr;
     privious_hexa->located_agent = nullptr;

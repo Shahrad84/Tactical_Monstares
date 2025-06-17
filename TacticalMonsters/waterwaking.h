@@ -3,15 +3,16 @@
 
 #include "agent.h"
 
-class WaterWaking : public Agent
+class WaterWalking : public Agent
 {
 
 public:
-    WaterWaking(char player_type, QWidget* parent, play_page * page, string input_name);
+    WaterWalking(char player_type, QWidget* parent, play_page * page, string input_name);
+    void Unlock_allCompatibleHexas();
 
 private:
     void setWariourProperties();
-    //void Render_Agent();
+    //vo
 };
 
 #endif // WATERWAKING_H

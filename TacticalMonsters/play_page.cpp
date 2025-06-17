@@ -7,8 +7,12 @@
 #include "QString"
 #include "inrangesystem.h"
 #include <queue>
+#include "levelmanager.h"
+
 #include "floating.h"
-#include "levelmanager.h";
+#include "flying.h"
+#include "waterwaking.h"
+#include "grounded.h"
 
 using std::queue;
 
@@ -25,6 +29,8 @@ void play_page::change_turn(){
         ui->player_1_turn_label->hide();
         ui->player_2_turn_label->show();
     }
+
+    qDebug() << "turn : " << turn;
 }
 
 char play_page::turn = '2';
@@ -63,7 +69,7 @@ void play_page::parse(const QString &filepath) {
     //text(i+1 , 3j+1) = hexa(i, j)
 }
 
-play_page::play_page(QString player_1_name, QString player_2_name, QWidget *parent)
+play_page::play_page(QString player_1_name, QString player_2_name, vector <cart *> player_1_selectedCarts, vector <cart *> player_2_selectedCarts, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::play_page)
 {    
@@ -95,16 +101,48 @@ play_page::play_page(QString player_1_name, QString player_2_name, QWidget *pare
     }
 
     player_1_agents.resize(3);
+    player_2_agents.resize(3);
+    string t, n;
+
     for(int i = 0; i < 3; i++){
-        player_1_agents[i] = new Floating('1', this, this, "Sabrina");
+
+        n = player_1_selectedCarts[i]->get_subAgentName();
+        t = player_1_selectedCarts[i]->get_subAgentType();
+
+        if(t == "Floating"){
+            player_1_agents[i] = new Floating('1', this, this, n);
+        }
+        else if(t == "Flying"){
+            player_1_agents[i] = new Flying('1', this, this, n);
+        }
+        else if(t == "Water Walking"){
+            player_1_agents[i] = new WaterWalking('1', this, this, n);
+        }
+        else if(t == "Grounded"){
+            player_1_agents[i] = new Grounded('1', this, this, n);
+        }
         player_1_agents[i]->setGeometry(50, 70 * (i + 1), 50, 50);
     }
 
-    player_2_agents.resize(3);
     for(int i = 0; i < 3; i++){
-        player_2_agents[i] = new Floating('2', this, this, "Death");
+        n = player_2_selectedCarts[i]->get_subAgentName();
+        t = player_2_selectedCarts[i]->get_subAgentType();
+
+        if(t == "Floating"){
+            player_2_agents[i] = new Floating('2', this, this, n);
+        }
+        else if(t == "Flying"){
+            player_2_agents[i] = new Flying('2', this, this, n);
+        }
+        else if(t == "Water Walking"){
+            player_2_agents[i] = new WaterWalking('2', this, this, n);
+        }
+        else if(t == "Grounded"){
+            player_2_agents[i] = new Grounded('2', this, this, n);
+        }
         player_2_agents[i]->setGeometry(1260, 70 * (i + 1), 50, 50);
     }
+
 
     setWindowTitle("play_page");
 

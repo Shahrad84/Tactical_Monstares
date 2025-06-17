@@ -8,6 +8,8 @@
 #include "QMouseEvent"
 #include <QLabel>
 #include <QMouseEvent>
+#include "string"
+using std::string;
 
 class cart : public QLabel
 {
@@ -15,6 +17,9 @@ class cart : public QLabel
 public:
     cart(QLabel *inputQLabel, char inputOwnership, QWidget *parent = nullptr);
     bool get_isSelected();
+
+    string get_subAgentType();
+    string get_subAgentName();
 
 signals:
     void clicked();
@@ -26,6 +31,10 @@ private:
     char ownership;
     QLabel * qlabel;
     bool isSelected;
+
+    string subAgentType;
+    string subAgentName;
+    void parseText();
 
 };
 

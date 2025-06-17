@@ -8,10 +8,11 @@ class Grounded : public Agent
 
 public:
     Grounded(char player_type, QWidget* parent, play_page * page, string input_name);
+    void Unlock_allCompatibleHexas();
 
 private:
     void setWariourProperties();
-    //void Render_Agent();
+    //vo
 };
 
 #endif // GROUNDED_H

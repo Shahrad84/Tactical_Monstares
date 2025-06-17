@@ -10,6 +10,9 @@
 #include <QVector>
 #include <QString>
 #include "levelmanager.h"
+#include "cart.h"
+#include "string"
+using std::string;
 
 using std::vector;
 
@@ -26,7 +29,7 @@ class play_page : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit play_page(QString player_1_name, QString player_2_name, QWidget * parent = nullptr);
+    explicit play_page(QString player_1_name, QString player_2_name, vector <cart *> player_1_selectedCarts, vector <cart *> player_2_selectedCarts, QWidget * parent = nullptr);
     void parse(const QString &);
     ~play_page();
 

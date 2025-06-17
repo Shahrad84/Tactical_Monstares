@@ -14,17 +14,17 @@ DeckSet::DeckSet(QString player_1_name, QString player_2_name, QWidget *parent)
 
     QLayout* layout_1 = ui->groupBox_p1->layout();
     if (!layout_1) {
-        qDebug() << "groupBox_2 has no layout!";
+        //qDebug() << "groupBox_2 has no layout!";
     }
 
     QList<QLabel*> labels_1 = ui->groupBox_p1->findChildren<QLabel*>();
-    qDebug() << "Found" << labels_1.size() << "QLabels in groupBox_2";
+    //qDebug() << "Found" << labels_1.size() << "QLabels in groupBox_2";
 
     for (QLabel* label : labels_1) {
         if (label) {
             cart* c = new cart(label, '1', this);
             player_1_allCarts.push_back(c);
-            qDebug() << "Created cart for label:" << label->objectName();
+            //qDebug() << "Created cart for label:" << label->objectName();
         }
     }
 
@@ -32,17 +32,17 @@ DeckSet::DeckSet(QString player_1_name, QString player_2_name, QWidget *parent)
 
     QLayout* layout_2 = ui->groupBox_p2->layout();
     if (!layout_2) {
-        qDebug() << "groupBox_2 has no layout!";
+        //qDebug() << "groupBox_2 has no layout!";
     }
 
     QList<QLabel*> labels_2 = ui->groupBox_p2->findChildren<QLabel*>();
-    qDebug() << "Found" << labels_2.size() << "QLabels in groupBox_2";
+    //qDebug() << "Found" << labels_2.size() << "QLabels in groupBox_2";
 
     for (QLabel* label : labels_2) {
         if (label) {
             cart* c = new cart(label, '2', this);
             player_2_allCarts.push_back(c);
-            qDebug() << "Created cart for label:" << label->objectName();
+            //qDebug() << "Created cart for label:" << label->objectName();
         }
     }
 
@@ -83,21 +83,21 @@ void DeckSet::on_Play_pushBtn_clicked()
 {
     for(int i = 0; i < 24; i++){
         if(player_1_allCarts[i]->get_isSelected()){
-            player_1_selectedAgents.push_back(player_1_allCarts[i]);
+            player_1_selectedCarts.push_back(player_1_allCarts[i]);
         }
         if(player_2_allCarts[i]->get_isSelected()){
-            player_2_selectedAgents.push_back(player_2_allCarts[i]);
+            player_2_selectedCarts.push_back(player_2_allCarts[i]);
         }
     }
 
-    if(player_1_selectedAgents.size() == 3 && player_2_selectedAgents.size() == 3){
-        play_page * w5 = new play_page(player_1_name, player_2_name);
+    if(player_1_selectedCarts.size() == 3 && player_2_selectedCarts.size() == 3){
+        play_page * w5 = new play_page(player_1_name, player_2_name, player_1_selectedCarts, player_2_selectedCarts);
         w5->setWindowTitle("play page");
         w5->show();
         this->close();
     }
     else{
-        vector <cart *>().swap(player_1_selectedAgents);
+        vector <cart *>().swap(player_1_selectedCarts);
         QMessageBox::warning(this, "error", "players have select only 3 agents");
     }
 }

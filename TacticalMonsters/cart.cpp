@@ -10,6 +10,8 @@ cart::cart(QLabel *inputQLabel, char inputOwnership, QWidget *parent)
     qlabel->setMouseTracking(true);
 
     isSelected = false;
+
+    parseText();
 }
 
 bool cart::eventFilter(QObject* watched, QEvent* event)
@@ -36,4 +38,36 @@ bool cart::eventFilter(QObject* watched, QEvent* event)
 
 bool cart::get_isSelected(){
     return isSelected;
+}
+
+void cart::parseText(){
+    string rawText = qlabel->text().toStdString();
+
+    int i;
+    for(i = 0; i < rawText.length(); i++){
+        if(rawText[i] == ':'){
+            break;
+        }
+    }
+
+    if(i == 0){
+        return;
+    }
+
+    for(int j = 0; j < i; j++){
+        subAgentType += rawText[j];
+    }
+    for(int j = i + 1; j < rawText.length(); j++){
+        subAgentName += rawText[j];
+    }
+
+    //qDebug() << "this cart is " << subAgentType << "with name " << subAgentName;
+}
+
+
+string cart::get_subAgentType(){
+    return subAgentType;
+}
+string cart::get_subAgentName(){
+    return subAgentName;
 }

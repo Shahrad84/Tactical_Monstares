@@ -33,8 +33,8 @@ private:
     vector <cart *> player_1_allCarts;
     vector <cart *> player_2_allCarts;
 
-    vector <cart *> player_1_selectedAgents;
-    vector <cart *> player_2_selectedAgents;
+    vector <cart *> player_1_selectedCarts;
+    vector <cart *> player_2_selectedCarts;
 
     QString player_1_name;
     QString player_2_name;

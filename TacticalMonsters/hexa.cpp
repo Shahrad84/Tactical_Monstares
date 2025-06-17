@@ -18,6 +18,7 @@ void Hexa::mousePressEvent(QMouseEvent* event){
 
             if(((playPage->in_range_system->find_in_queue(this, playPage->in_range_system->get_movebale_hexas())) || !Agent::clicked_agent->located_hexa)
                 && Agent::clicked_agent->is_hexa_compatible(this, Agent::clicked_agent->compatible_types_to_LOCATE)){
+
                 emit clicked();
 
                 Hexa * privious_hexa = Agent::clicked_agent->located_hexa;
@@ -28,7 +29,7 @@ void Hexa::mousePressEvent(QMouseEvent* event){
 
                 Agent::clicked_agent->Move(this);
                 Agent::clicked_agent = nullptr;
-
+;
                 if(privious_hexa != nullptr){
                     privious_hexa->located_agent = nullptr;
                 }
@@ -37,6 +38,8 @@ void Hexa::mousePressEvent(QMouseEvent* event){
                 playPage->level_maganer->Update();
 
                 playPage->in_range_system->clear_queue_and_vector();
+
+
             }
         }
 
