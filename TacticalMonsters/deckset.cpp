@@ -12,6 +12,9 @@ DeckSet::DeckSet(QString player_1_name, QString player_2_name, QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->groupBox_p1->setTitle(player_1_name);
+    ui->groupBox_p2->setTitle(player_2_name);
+
     QLayout* layout_1 = ui->groupBox_p1->layout();
     if (!layout_1) {
         //qDebug() << "groupBox_2 has no layout!";

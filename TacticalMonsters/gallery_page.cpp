@@ -6,8 +6,8 @@ gallery_page::gallery_page(QWidget *parent)
     , ui(new Ui::gallery_page)
 {
     ui->setupUi(this);
-    setMaximumSize(500, 400);
-    setMinimumSize(500, 400);
+    setMaximumSize(840, 640);
+    setMinimumSize(840, 640);
 }
 
 gallery_page::~gallery_page()

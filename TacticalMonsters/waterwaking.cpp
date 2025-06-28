@@ -39,11 +39,9 @@ void WaterWalking::setWariourProperties(){
 void WaterWalking::Unlock_allCompatibleHexas(){
     compatible_types_to_PASS.push_back('p');
     compatible_types_to_PASS.push_back('~');
-    compatible_types_to_PASS.push_back('#');
 
     compatible_types_to_LOCATE.push_back('p');
     compatible_types_to_LOCATE.push_back('~');
-    compatible_types_to_LOCATE.push_back('#');
 }
 
 // void Floating::Render_Agent(){

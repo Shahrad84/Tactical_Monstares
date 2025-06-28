@@ -50,7 +50,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 0, 0, 70);</string>
+background-color: rgb(255, 85, 0);</string>
      </property>
      <property name="text">
       <string>your turn</string>
@@ -99,7 +99,7 @@ background-color: rgba(255, 0, 0, 70);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(0, 0, 255, 70);</string>
+background-color: rgb(151, 0, 227);</string>
      </property>
      <property name="text">
       <string>your turn</string>

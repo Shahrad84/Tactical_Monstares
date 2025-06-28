@@ -97,6 +97,13 @@ void Agent::Render_Agent(){
     // }
 
     setStyleSheet("image: url(:/new/prefix1/heros/" + QString::fromStdString(name) + ".png);");
+
+    if(ownership == '1'){
+        setStyleSheet(styleSheet() + "background-color: rgb(255, 85, 0);");
+    }
+    else{
+        setStyleSheet(styleSheet() + "background-color: rgb(151, 0, 227);");
+    }
 }
 
 void Agent::LockAgent(bool lockMode){
@@ -141,4 +148,8 @@ Agent::~Agent(){
     located_hexa = nullptr;
     privious_hexa->located_agent = nullptr;
     playPage->level_maganer->agentDied(ownership);
+}
+
+int Agent::get_attackRange(){
+    return attackRange;
 }

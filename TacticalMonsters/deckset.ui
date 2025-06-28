@@ -20,10 +20,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
-      <width>550</width>
-      <height>571</height>
+      <x>30</x>
+      <y>150</y>
+      <width>821</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="title">
@@ -33,9 +33,9 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>470</y>
-       <width>50</width>
-       <height>75</height>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -43,16 +43,16 @@
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Billy</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>470</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -60,16 +60,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Reketon</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>470</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -77,16 +77,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Angus</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>460</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -94,16 +94,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Duraham</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>460</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -112,16 +112,17 @@ image: url(:/new/prefix1/heros/Colonel Baba.png);
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:
+ Colonel Baba</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>450</y>
-       <width>50</width>
-       <height>75</height>
+       <x>520</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -129,16 +130,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Medusa</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>450</y>
-       <width>50</width>
-       <height>75</height>
+       <x>620</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -146,16 +147,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Bunka</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>450</y>
-       <width>50</width>
-       <height>75</height>
+       <x>720</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -163,16 +164,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Sanka</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -186,10 +187,10 @@ color: rgba(255, 255, 255, 0);</string>
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -197,16 +198,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Kabu</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -214,16 +215,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Salih</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -231,16 +232,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Rajakal</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -248,16 +249,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Khan</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>520</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -265,16 +266,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Boi</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>620</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -282,16 +283,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Eloi</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>720</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -299,16 +300,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Kanar</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_19">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -316,16 +317,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Karissa</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_20">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>20</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -333,16 +334,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Elsa</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -350,16 +351,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Sir Philip</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -367,16 +368,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Frost</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_23">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -384,16 +385,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Tusk</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_24">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>40</y>
-       <width>50</width>
-       <height>75</height>
+       <x>720</x>
+       <y>30</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -401,7 +402,7 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Flying:Rambo</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_25">
@@ -409,8 +410,8 @@ color: rgba(255, 255, 255, 0);</string>
       <rect>
        <x>20</x>
        <y>30</y>
-       <width>50</width>
-       <height>75</height>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -424,10 +425,10 @@ color: rgba(255, 255, 255, 0);</string>
     <widget class="QLabel" name="label_26">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>120</x>
        <y>30</y>
-       <width>50</width>
-       <height>75</height>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -442,8 +443,8 @@ color: rgba(255, 255, 255, 0);</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>10</y>
+      <x>480</x>
+      <y>0</y>
       <width>231</width>
       <height>71</height>
      </rect>
@@ -463,8 +464,8 @@ color: rgba(255, 255, 255, 0);</string>
    <widget class="QPushButton" name="playerSwitch_1_pushBtn">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>50</y>
+      <x>350</x>
+      <y>100</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -476,9 +477,9 @@ color: rgba(255, 255, 255, 0);</string>
    <widget class="QPushButton" name="Play_pushBtn">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>540</x>
       <y>720</y>
-      <width>131</width>
+      <width>120</width>
       <height>31</height>
      </rect>
     </property>
@@ -486,28 +487,41 @@ color: rgba(255, 255, 255, 0);</string>
      <string>Play</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="playerSwitch_2_pushBtn">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>100</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Player 2's deck</string>
+    </property>
+   </widget>
    <widget class="QGroupBox" name="groupBox_p2">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>100</y>
-      <width>431</width>
-      <height>401</height>
+      <x>350</x>
+      <y>150</y>
+      <width>821</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="title">
      <string>PlayerName</string>
     </property>
-    <widget class="QLabel" name="label_51">
+    <widget class="QLabel" name="label_27">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -515,16 +529,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Billy</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_52">
+    <widget class="QLabel" name="label_28">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -532,16 +546,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Reketon</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_53">
+    <widget class="QLabel" name="label_29">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -549,16 +563,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Angus</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_54">
+    <widget class="QLabel" name="label_30">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -566,16 +580,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Duraham</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_55">
+    <widget class="QLabel" name="label_31">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -584,16 +598,17 @@ image: url(:/new/prefix1/heros/Colonel Baba.png);
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:
+ Colonel Baba</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_56">
+    <widget class="QLabel" name="label_32">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>520</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -601,16 +616,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Medusa</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_57">
+    <widget class="QLabel" name="label_33">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>620</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -618,16 +633,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Bunka</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_58">
+    <widget class="QLabel" name="label_34">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>310</y>
-       <width>50</width>
-       <height>75</height>
+       <x>720</x>
+       <y>410</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -635,16 +650,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Water Walking:Sanka</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_59">
+    <widget class="QLabel" name="label_35">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -655,13 +670,13 @@ color: rgba(255, 255, 255, 0);</string>
       <string>Grounded:Sir Lamorak</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_60">
+    <widget class="QLabel" name="label_36">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -669,16 +684,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Kabu</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_61">
+    <widget class="QLabel" name="label_37">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -686,16 +701,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Salih</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_62">
+    <widget class="QLabel" name="label_38">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -703,16 +718,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Rajakal</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_63">
+    <widget class="QLabel" name="label_39">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -720,16 +735,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Khan</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_64">
+    <widget class="QLabel" name="label_40">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>520</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -737,16 +752,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Boi</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_65">
+    <widget class="QLabel" name="label_41">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>620</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -754,16 +769,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Eloi</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_66">
+    <widget class="QLabel" name="label_42">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>720</x>
+       <y>170</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -771,16 +786,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Kanar</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_67">
+    <widget class="QLabel" name="label_43">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>120</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -788,16 +803,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Karissa</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_68">
+    <widget class="QLabel" name="label_44">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>130</y>
-       <width>50</width>
-       <height>75</height>
+       <x>20</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -805,16 +820,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Elsa</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_69">
+    <widget class="QLabel" name="label_45">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>220</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -822,16 +837,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Sir Philip</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_70">
+    <widget class="QLabel" name="label_46">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>320</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -839,16 +854,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Frost</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_71">
+    <widget class="QLabel" name="label_47">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>210</y>
-       <width>50</width>
-       <height>75</height>
+       <x>420</x>
+       <y>270</y>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -856,16 +871,16 @@ color: rgba(255, 255, 255, 0);</string>
 color: rgba(255, 255, 255, 0);</string>
      </property>
      <property name="text">
-      <string>Agent</string>
+      <string>Grounded:Tusk</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_72">
+    <widget class="QLabel" name="label_48">
      <property name="geometry">
       <rect>
-       <x>650</x>
+       <x>720</x>
        <y>30</y>
-       <width>50</width>
-       <height>75</height>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -876,16 +891,13 @@ color: rgba(255, 255, 255, 0);</string>
       <string>Flying:Rambo</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_73">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
+    <widget class="QLabel" name="label_49">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>30</y>
-       <width>50</width>
-       <height>75</height>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -896,13 +908,13 @@ color: rgba(255, 255, 255, 0);</string>
       <string>Floating:Death</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_74">
+    <widget class="QLabel" name="label_50">
      <property name="geometry">
       <rect>
-       <x>90</x>
+       <x>120</x>
        <y>30</y>
-       <width>50</width>
-       <height>75</height>
+       <width>75</width>
+       <height>90</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -913,19 +925,6 @@ color: rgba(255, 255, 255, 0);</string>
       <string>Floating:Sabrina</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="playerSwitch_2_pushBtn">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>50</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Player 2's deck</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

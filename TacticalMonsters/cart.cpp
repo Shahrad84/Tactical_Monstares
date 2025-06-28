@@ -21,11 +21,11 @@ bool cart::eventFilter(QObject* watched, QEvent* event)
         if (mouseEvent->button() == Qt::LeftButton) {
 
             if(isSelected){
-                qlabel->resize(50, 60);
+                qlabel->resize(75, 90);
                 isSelected = false;
             }
             else{
-                qlabel->resize(60, 70);
+                qlabel->resize(90, 105);
                 isSelected = true;
             }
 

@@ -6,20 +6,452 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>840</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>340</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Tusk.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Tusk</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Peketon.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Reketon</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>340</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Frost.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Frost</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Sanka.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Sanka</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Kabu.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Kabu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Sir Lamorak.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Sir Lamorak</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>340</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Sir Philip.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Sir Philip</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Duraham.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Duraham</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Angus.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Angus</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Death.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Floating:Death</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Boi.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Boi</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+image: url(:/new/prefix1/heros/Colonel Baba.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:
+ Colonel Baba</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Kanar.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Kanar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Billy.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Billy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>100</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Rambo.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Flying:Rambo</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Salih.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Salih</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Khan.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Khan</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>100</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Sabrina.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Floating:Sabrina</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>340</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Karissa.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Elsa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Medusa.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Medusa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>340</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Elsa.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Karissa</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Rajakal.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Rajakal</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>240</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Eloi.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Grounded:Eloi</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>480</y>
+      <width>75</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/heros/Bunka.png);
+color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Water Walking:Bunka</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>30</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Agents:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>840</width>
      <height>17</height>
     </rect>
    </property>

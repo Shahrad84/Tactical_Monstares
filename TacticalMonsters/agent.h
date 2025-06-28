@@ -46,6 +46,7 @@ public:
     void reduce_HP(int);
     int get_HP();
     int get_damage();
+    int get_attackRange();
 
     virtual void Unlock_allCompatibleHexas() = 0;
 

@@ -35,7 +35,7 @@ void InRangeSystem::Find_in_range(Agent * agent, int range){
                         inProcess.push(neighbor);
                         moveable_hexas.push(neighbor);
                     }
-                    else if(neighbor->located_agent->ownership != agent->ownership && !find_in_queue(neighbor, attackable_hexas)){
+                    else if(neighbor->located_agent->ownership != agent->ownership && !find_in_queue(neighbor, attackable_hexas) && depth < agent->get_attackRange()){
                         attackable_hexas.push(neighbor);
                         //qDebug() << "attackable hexa with index" << neighbor->get_i() << neighbor->get_j();
                     }
